@@ -35,3 +35,5 @@ Cada sessão do site tem seu próprio css, como por exemplo o header. O header t
 ## Caso tenha alguma dúvida ou se você ver que o código pode dar algum problema com o backend, não hesite em me chamar no Whatsapp
 <br>
 Essa é a versão 1.1 do layout
+
+## Não esqueca do .htaccess (Ele proibe o acesso pelo IE)
