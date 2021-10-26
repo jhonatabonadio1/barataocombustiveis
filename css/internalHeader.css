@@ -1,0 +1,107 @@
+
+  
+  header nav {
+    background: #fff;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    padding-right: 40px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 2%);
+  }
+  
+  header nav{
+    height: 140px;
+  }
+  
+  header nav a.logo {
+    z-index: 2;
+  }
+  
+  header nav a.logo img {
+    width: 80px;
+  }
+  
+  header nav button.toggle {
+    z-index: 2;
+    color: var(--primary);
+    font-size: 35px;
+    background: transparent;
+    border: 0px;
+    cursor: pointer;
+  }
+  
+  header nav ul {
+    list-style: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 0.5s;
+    z-index: 3;
+  }
+  
+  header nav ul.active {
+    max-width: 100%;
+  }
+  
+  header nav ul .toggle {
+    position: absolute;
+    right: 40px;
+    top: 50px;
+  }
+  
+  header nav ul .toggle.hidden {
+    display: none;
+  }
+  
+  header nav ul li {
+    display: block;
+  }
+  
+  header nav a {
+    display: block;
+    margin: 16px 25px;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+  }
+
+  header nav a.disabled{
+    color:#ccc;
+  }
+  
+  header nav a.disabled:hover{
+    color:#ccc;
+  }
+
+  header nav a:hover {
+    color: var(--primary);
+  }
+  
+  header nav .btn-nav {
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    color: var(--primary);
+    padding: 16px 32px;
+    transition: background 0.2s ease;
+  }
+  
+  header nav .btn-nav:hover {
+    background: var(--primary);
+    color: #fff;
+  }

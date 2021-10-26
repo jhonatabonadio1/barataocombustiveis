@@ -1,0 +1,1066 @@
+
+/********************************/
+/********** GLOBAL *************/
+/*******************************/
+
+body {
+    background: #f8fef8;
+}
+
+h1 {
+    font-size: 2.2rem;
+    line-height: 35px;
+    margin-bottom: 1rem;
+}
+
+.fuelCount{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.steps {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+    margin-top: 2.6rem;
+}
+
+.steps .main {
+    margin-bottom: 9.6rem;
+}
+
+.card {
+    background: #fff;
+    padding: 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px 0 rgb(0 0 0 / 7%);
+    border: 1px solid rgb(12);
+    margin-bottom: 1rem;
+}
+
+.sideHidden {
+    display: none;
+}
+
+.sideHidden.active {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modalMask {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0 0 0 / 10%);
+    position: fixed;
+    z-index: 2;
+    display: none;
+}
+
+.modalMask.active {
+    display: block;
+}
+
+.cartText {
+    margin: 15px 0;
+}
+
+.borderTop {
+    border-top: 1px solid rgb(0 0 0 / 10%);
+    padding-top: 15px;
+}
+
+.mt-4 {
+    margin-top: 15px;
+}
+
+.inputGrid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    gap:30px;
+}
+
+/********************************/
+/********** END GLOBAL *********/
+/*******************************/
+
+
+
+/*********************************/
+/********** SIDELEFT ************/
+/*******************************/
+
+
+.sideLeft {
+    display: none;
+}
+
+.sideLeft .logo img {
+    width: 80px;
+}
+
+.sideLeft {
+    height: 100vh;
+    -webkit-flex: 0 0 175px;
+    flex: 0 0 175px;
+    max-width: 175px;
+    width: 175px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+    align-items: center;
+    padding-top: 40px;
+}
+
+.sideLeft .account {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.sideLeft .account button {
+
+    font-size: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+.menu-link {
+    width: 100%;
+    font-size: 12px;
+    letter-spacing: .08px;
+    line-height: 14px;
+    text-align: center;
+    padding: 5px 0;
+    background-position: 0 50%;
+    background-size: 16px;
+    cursor: inherit;
+    background-color: #fff;
+    text-decoration: none;
+    transition: all .15s linear;
+}
+
+.menu-link,
+.menu-link .menu-link-icon {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 10px auto;
+    opacity: .7;
+}
+
+.menu-link.active div,
+.menu-link.active a {
+    color: var(--primary);
+    opacity: 1;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.menu-link.active a:hover {
+    opacity: .7;
+}
+
+.menu-link.active {
+    opacity: 1;
+}
+
+.menu-link div {
+    color: #8b94a9;
+    text-decoration: none;
+}
+
+.menu-link div i {
+    color: #fff;
+}
+
+.menu-link.active .menu-link-icon {
+    background-color: var(--primary);
+}
+
+.menu-link .menu-link-icon {
+    width: 66px;
+    height: 66px;
+    background-color: #efefef;
+    color: var(--primary);
+    border-radius: 16px;
+}
+
+.menu-link.active .menu-link-icon .wrap {
+    background-color: #fff;
+}
+
+.menu-link .menu-link-icon .wrap {
+    width: 25px;
+    height: 25px;
+    background-color: #4a4a4a;
+    border-radius: 6px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.menu-link.active .menu-link-icon .wrap i {
+    color: var(--primary);
+}
+
+.menu-link span {
+    font-weight: bolder;
+}
+
+/************************************/
+/********** END SIDELEFT ***********/
+/***********************************/
+
+
+/*********************************/
+/********** SIDERIGHT ***********/
+/*******************************/
+
+.sideRight {
+    display: none;
+}
+
+
+.sideRight {
+    position: fixed;
+    z-index: 100;
+    height: calc(100vh - 77px);
+    top: 0px;
+    overflow-y: auto;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    max-width: 350px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+    padding: 20px;
+}
+
+.cartPriceFlex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#cartRemove {
+    background: #f27474;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    text-align: center;
+    line-height: 27px;
+    border-radius: 50%;
+}
+
+.sidebarBody .cupom .inputGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    margin: 1.2rem 0;
+    justify-content: flex-start;
+}
+
+.sidebarBody .cupom .inputGroup input {
+    border-radius: 40px 0 0px 40px;
+    border-right: 0;
+    width: 100%;
+}
+
+.sidebarBody .cupom .inputGroup button {
+    border-radius: 0 40px 40px 0;
+    border-left: 0;
+}
+
+
+/*************************************/
+/********** END SIDERIGHT ***********/
+/***********************************/
+
+
+/*********************************/
+/********** FUEL CARD ***********/
+/*******************************/
+
+.fuelCard .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.fuelCard .flex .col .flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.fuelCard .flex .col .flex img {
+    border-radius: 12px;
+}
+
+.fuelCard .flex .col-auto .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.fuelCard h3 {
+    margin-bottom: 0;
+    color: rgb(0 0 0 / 60%)
+}
+
+.fuelCard h4 {
+    color: #3378d5;
+    font-size: 1.2rem;
+}
+
+.fuelCard .addQuantity {
+    display: block;
+}
+
+.fuelCard .addQuantity label {
+    background: #fff;
+    position: relative;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.fuelCard .form {
+    display: flex;
+    margin-top: 4px;
+}
+
+.fuelCard .addQuantity input {
+    width: 42px;
+    resize: vertical;
+    text-align: center;
+    display: inline-block;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    font-weight: bold;
+    padding-left: 12px;
+    font-size: 16px;
+    border-color: #dcdcdc;
+}
+
+.fuelCard .addQuantity input::-webkit-outer-spin-button,
+.fuelCard .addQuantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.fuelCard .addQuantity button {
+    min-width: 45px;
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: bold;
+    border-color: #dcdcdc;
+}
+
+.fuelCard .addQuantity button:first-child {
+    border-right: 0;
+    border-radius: 40px 0 0 40px;
+}
+
+.fuelCard .addQuantity button:last-child {
+    border-left: 0;
+    border-radius: 0 40px 40px 0;
+}
+
+.steps .pointer {
+    font-size: 28px;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.fuelCard .cardAccordion {
+    display: block;
+    margin-top: 1.8rem;
+    border-top: 1px solid #dcdcdc;
+    padding: 1.8rem 0;
+    padding-bottom: 0;
+}
+
+.fuelCard .cardAccordion .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.fuelCard .cardAccordion .inputGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.fuelCard .cardAccordion .inputGrid input,
+.fuelCard .cardAccordion .inputGrid select {
+    width: 100%;
+    margin-top: -8px;
+    display: block;
+    border-color: #dcdcdc;
+}
+
+.fuelCard .cardAccordion .inputGrid label {
+    margin-left: 18px;
+    background: #fff;
+    position: relative;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+.fuelCard .cardAccordion button {
+    border: none;
+    color: #fff;
+    border-color: #3378d5;
+    background: #3378d5;
+    transition: background 0.2s ease;
+}
+
+.fuelCard .cardAccordion button:hover {
+    background: #1c5bad;
+}
+
+#ltsValue {
+    font-weight: bold;
+}
+
+/************************************/
+/********** END FUEL CARD ***********/
+/************************************/
+
+/************************************/
+/*************** CART ***************/
+/************************************/
+.cart {
+    z-index: 2;
+}
+
+.cartItem {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+    z-index: 1;
+}
+
+.cartItem:last-child {
+    border-bottom: 0;
+}
+
+.cartFlex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.cartFlex p {
+    margin-bottom: 0;
+    line-height: 1rem;
+}
+
+.cartInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cartFooter {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.cartFooter a {
+    background: var(--primary);
+    padding: 2px 10px;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cartPrice {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cartPrice span {
+    font-weight: bold;
+}
+
+.emptyCart {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.emptyCartFooter {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100% - 80px);
+}
+
+.empty {
+    color: rgb(0 0 0 / 20%);
+    font-weight: normal;
+    font-size: 1.6rem;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.emptyCart.active {
+    display: flex;
+}
+
+.emptyCartFooter.active {
+    display: flex;
+}
+
+/************************************/
+/*********** END CART ***************/
+/************************************/
+
+/***************************************/
+/*********** SIDE FOOTER ***************/
+/***************************************/
+.sideBottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    width: 100%;
+    background: var(--primary);
+}
+
+.sideBottom .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    color: #fff;
+}
+
+.sideBottom h3 {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.sideBottom .pointer {
+    color: #fff;
+}
+
+/*******************************************/
+/*********** END SIDE FOOTER ***************/
+/*******************************************/
+
+/***************************************/
+/*********** FUEL FOOTER ***************/
+/***************************************/
+.fuelFooter.flex {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.8rem;
+    position: fixed;
+    align-items: center;
+    bottom: 0;
+    width: 350px;
+    background: #fff;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+    padding: 1rem 1rem;
+}
+
+.fuelFooter h3 {
+    margin-bottom: 0;
+    color: var(--primary)
+}
+
+/*******************************************/
+/*********** END FUEL FOOTER ***************/
+/*******************************************/
+
+
+/*******************************************/
+/*********** PAY BUTTON FOOTER *************/
+/*******************************************/
+.payButtonFooter {
+    position: fixed;
+    bottom: 90px;
+    width: 100%;
+    left: 0;
+    padding: 0 15px;
+}
+
+.payButtonFooter button {
+    width: 100%;
+}
+
+/*******************************************/
+/*********** END PAY BUTTON FOOTER *********/
+/*******************************************/
+
+/*******************************************/
+/*********** CHECKOUT MODAL ****************/
+/*******************************************/
+
+
+.checkoutModal {
+    position: fixed;
+    width: 100%;
+    overflow-y: hidden;
+    bottom: 0;
+    background: #fff;
+    left: 0;
+    z-index: 3;
+    height: 80%;
+}
+
+.checkoutModal .flex {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.checkoutModal .sidebarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    z-index: 1;
+    height: 80px;
+}
+
+.checkoutModal .sidebarHeader h3 {
+    margin-bottom: 0;
+}
+
+.checkoutModal .sidebarBody {
+    box-shadow: 0 15px 35px rgb(50 50 93 / 20%), 0 5px 15px rgb(0 0 0 / 17%);
+    width: 100%;
+    padding: 10px 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.checkoutModal .cupom {
+    margin-top: 0.8rem;
+}
+
+/*******************************************/
+/*********** END CHECKOUT MODAL ************/
+/*******************************************/
+
+
+
+/*******************************/
+/*********** BADGE ************/
+/******************************/
+
+.badge {
+    background: #3378d5;
+    padding: 2px 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/******************************/
+/********* END BADGE *********/
+/*****************************/
+
+
+/******************************/
+/********* ALERTA *************/
+/*****************************/
+.alert {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 .5rem rgba(136, 152, 170, .075) !important;
+}
+
+.alert {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.alert .calendar {
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    border-top-width: 8px;
+    --bg-opacity: 1;
+    background-color: rgba(247, 250, 252, var(--bg-opacity));
+    max-width: 20rem;
+    --border-opacity: 1;
+    border-top: 8px solid rgba(236, 201, 75);
+    border-color: rgba(236, 201, 75, var(--border-opacity));
+}
+
+.alert .calendar span {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    opacity: .4;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.alert .calendar div {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    --text-opacity: 1;
+    color: rgba(236, 201, 75, var(--text-opacity));
+}
+
+.alert h3 {
+    color: rgb(0 0 0 / 60%);
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.alert span {
+    color: rgb(0 0 0 / 40%);
+    line-height: 24px;
+}
+
+/******************************/
+/********* END ALERTA *********/
+/*****************************/
+
+
+
+/******************************/
+/********* TAB LINKS **********/
+/*****************************/
+.main .tablinks {
+    font-size: 16px;
+    height: initial;
+    padding: 15px 20px;
+    margin-right: 5px;
+    border-radius: 6px;
+    min-width: 80px;
+    background: #fff;
+    color: #222;
+    border: none;
+    box-shadow: 0 0 .5rem rgba(136, 152, 170, .075);
+}
+
+.main .tabcontent {
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 0 .5rem rgba(136, 152, 170, .075);
+}
+
+.main .tabcontent .tabHeader {
+    padding: 20px 30px;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+    font-weight: bold;
+    color: rgb(0 0 0 / 60%);
+}
+
+.main .tabcontent .tabBody {
+    padding: 30px;
+}
+
+.main .tablinks.active {
+    border: 1px solid #3378d5;
+}
+
+.main .tablinks:hover {
+    border: 1px solid #3378d5;
+}
+
+.main .tablinks:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.main .tablinks:disabled:hover {
+    border: none;
+}
+
+/******************************/
+/******* END TAB LINKS ********/
+/*****************************/
+
+/******************************/
+/******* TAB CONTENT **********/
+/*****************************/
+
+.cardInfos {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.tabcontent label {
+    font-size: 14px;
+    background: #fff !important;
+    padding: 0 10px;
+    margin: 0 30px;
+    color: rgb(0 0 0 / 40%);
+    position: relative;
+}
+
+.tabcontent .inputGroup {
+    display: flex;
+    height: 60px;
+    margin-top: -9px;
+}
+.inputGroup{
+    margin-bottom: 30px;
+}
+.inputGroup:last-child{
+    margin-bottom: 0;
+}
+
+
+.tabcontent .inputGroup input {
+    border-left: 0;
+    border-radius: 0 40px 40px 0;
+    padding-left: 0;
+}
+
+/******************************/
+/******* END TAB CONTENT ******/
+/*****************************/
+
+/******************************/
+/******* PAYMENT FORM *********/
+/*****************************/
+
+.paymentForm input,
+.paymentForm select {
+    height: 60px;
+    width: 100%;
+}
+
+.input-group-prepend {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: .800rem 20px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #adb5bd;
+    text-align: center;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 1px solid rgb(0 0 0 / 16%);
+    border-right: 0;
+    border-radius: 40px 0 0 40px;
+}
+
+/******************************/
+/****** END PAYMENT FORM ******/
+/*****************************/
+
+/******************************/
+/****** CREDITCARD ***********/
+/*****************************/
+
+.card-wrapper {
+    margin-bottom: 30px;
+}
+
+.card-wrapper .jp-card-container {
+    z-index: 0;
+}
+
+/******************************/
+/****** END CREDITCARD *******/
+/*****************************/
+
+
+@media(min-width: 980px) {
+    h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1.8rem;
+    }
+    .inputGrid {
+        gap: 30px;
+    }
+    .internalNav {
+        display: none;
+    }
+    .steps {
+        margin-top: 0;
+    }
+    .inputGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .main {
+        flex-basis: calc(100% - 175px);
+        flex-shrink: 0;
+        flex-grow: 0;
+        max-width: calc(100% - 175px);
+        margin-right: 350px;
+        padding-left: 26px;
+        padding-right: 25px;
+        padding-top: 25px;
+        margin-top: 0;
+        margin-bottom: 1.8rem !important;
+        position: relative !important;
+    }
+    .alert {
+        flex-direction: row;
+        text-align: left;
+    }
+    .fuelCard .flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .fuelCard .flex .col-auto .flex {
+        gap: 15px;
+        margin-top: 0;
+    }
+
+    .sideRight{
+        display: block;
+    }
+
+    .fuelFooter.flex {
+        display: flex;
+    }
+
+    .main .tablinks {
+        font-size: 18px;
+        padding: 20px 30px;
+        min-width: 130px;
+        margin-right: 10px;
+    }
+    .footer{
+        display: none;
+    }
+}
+
+@media(min-width: 1200px) {
+    .internalNav {
+        display: none;
+    }
+    .sideLeft{
+        display: flex;
+    }
+    .main {
+        flex-basis: calc(100% - 525px);
+        max-width: calc(100% - 525px);
+        margin-left: 175px;
+        margin-right: 350px;
+
+    }
+    .fuelCard .flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .fuelCard .flex .col-auto .flex {
+        gap: 15px;
+        margin-top: 0;
+    }
+    .fuelFooter.flex {
+        display: flex;
+    }
+    .cardInfos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(min-width: 1400px) {
+    .cardInfos {
+        grid-template-columns: 1fr 1fr;
+    }
+    .customerInfo{
+        margin-top: 30px;
+    }
+}
+@media(max-width: 480px){
+    .main .tabcontent .tabBody {
+        padding:30px 20px;
+    }
+    .main .tab{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .main .tablinks{
+        font-size: 14px;
+    }
+    .cardInfos{
+        display: block;
+    }
+    .customerInfo{
+        margin-top: 30px;
+    }
+    .card-wrapper{
+
+        display: none;
+    }
+    
+}

@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} .*Trident.* [NC]
+RewriteRule ^ - [R=403]
+
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} .*MSIE.* [NC]
+RewriteRule ^ - [R=403]
+</IfModule>

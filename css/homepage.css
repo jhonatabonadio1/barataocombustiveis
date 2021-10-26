@@ -1,0 +1,496 @@
+section.hero {
+    background: #f3f3f3;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    background: #f3f3f3;
+    z-index: 1;
+    padding-bottom: 40px;
+}
+
+section.hero:before {
+    content: "";
+    display: block;
+    top: 0px;
+    right: 0px;
+    max-height: 100%;
+    width: 100%;
+    height: 480px;
+    background: url("../assets/initial_img.png") no-repeat center top;
+    background-size: auto 480px;
+    margin-top:-8em;
+}
+
+section.hero .grid{
+    margin-top: 2em;
+}
+
+section.hero h1 {
+    font-size: 3.4rem;
+    line-height: 3.4rem;
+}
+
+section.hero h2{
+    font-size:1.4rem;
+}
+
+section.hero h3 {
+    margin-bottom: 1rem;
+}
+
+section.hero form {
+    background: #fff;
+    padding: 8px;
+    border-radius: 40px;
+    display: flex;
+    gap: 5px;
+    box-shadow: 0 0 15px rgb(145 145 145 / 10%);
+}
+
+section.hero form input {
+    flex: 1;
+    border: none;
+}
+
+section.hero form button i {
+    font-size: 16px;
+}
+
+section.fuelEconomy {
+    position: relative;
+    z-index: 1;
+    margin-top: 6rem;
+}
+
+section.fuelEconomy:before {
+    content: "";
+    width: 60%;
+    height: 100%;
+    top: 0px;
+    background: url(../assets/bg1.jpg) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    border-radius: 0 12px 12px 0;
+}
+
+section.fuelEconomy .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+section.fuelEconomy .sectionCard {
+    background: #fff;
+    z-index: 1;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    box-shadow: 0 20px 40px 0 rgb(0 0 0 / 7%);
+}
+
+section.fuelEconomy .sectionCard button{
+    width: 100%;
+}
+
+.testimonials {
+    position: relative;
+    z-index: 1;
+    margin-top: 6rem;
+}
+
+.testimonials:before {
+    content: "";
+    width: 60%;
+    height: 100%;
+    top: 0px;
+    background: var(--bg);
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    border-radius: 16px 0 0 16px;
+}
+
+.testimonials .owl-carousel {
+    padding: 20px 0;
+}
+
+.testimonials .owl-stage {
+    padding-bottom: 24px;
+}
+
+.testimonials .owl-slide {
+    background-color: #fff;
+    border-radius: 12px;
+    min-height: 200px;
+    box-shadow: 0 0 20px rgba(145, 145, 145, 0.1);
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.testimonials .owl-slide .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials .owl-slide .testimonial-img {
+    width: 100px;
+}
+
+.testimonials .owl-slide .testimonial-img img {
+    border-radius: 50%;
+}
+
+.testimonials .owl-slide .container {
+    flex: 1
+}
+
+.testimonials .owl-slide .container p {
+    color: var(--title);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.testimonials .owl-slide .container span {
+    color: var(--text);
+
+}
+
+.testimonials .owl-slide .container .rate i {
+    color: var(--secondary);
+    margin-top: 0.4rem;
+}
+
+.app {
+    background: linear-gradient(88deg, #565655 5%, #363635 95%);
+    position: relative;
+    padding: 4rem 0;
+    margin-top: 6rem;
+    z-index: 1;
+}
+
+.app h1 {
+    color: #fff;
+}
+
+.app p {
+    color: #fff;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.app .app_download_links {
+    display: flex;
+    flex-direction: column;
+}
+
+.app .app_download_links a {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.app .app_download_links a .app__button:first-child {
+    margin-right: 16px;
+}
+
+.app .app_download_links a .app__button {
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 22px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    min-width: 196px;
+}
+
+.app .app_download_links a .app__button p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+    margin-bottom: unset;
+    white-space: normal;
+}
+
+.app .app_download_links a .app__button .highlight_white {
+    color: #fff;
+    font-size: 18px;
+}
+
+.app .app_download h2 .highlight_white,
+.app .wrapper .app_download p .highlight_white {
+    color: #fff;
+    font-weight: 700;
+}
+
+.app .app_download_links a .app__button i {
+    color: #f9df00;
+    font-size: 32px;
+    margin-right: 12px;
+}
+
+.image-app {
+    display: none;
+}
+
+.image-app img {
+    width: 100%;
+}
+.faq{
+    padding: 100px 0;
+}
+.faq h1 {
+    text-align: center;
+}
+.faq .accordion {
+    background-color: #fff;
+    color: var(--text);
+    cursor: pointer;
+    padding: 28px;
+    width: 100%;
+    border: 1px solid rgba(145, 145, 145, 0.2);
+    border-radius: 12px;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq .accordion:after {
+    content: '\002B';
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 28px;
+    float: right;
+    margin-left: 20px;
+}
+
+.faq .accordion.active:after {
+    content: "\2212";
+}
+
+.faq .panel {
+    padding: 0 18px;
+    padding-right: 10px;
+    margin-top: 20px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.faq .help {
+    text-align: center;
+    margin-top: 1.8rem;
+}
+
+.faq .help img {
+    width: 70px;
+}
+
+.faq .help h2 {
+    margin-bottom: 0.8rem;
+}
+
+.faq .help p {
+    margin-bottom: 1.2rem;
+}
+
+.faq .help h2 {
+    color: var(--primary)
+}
+
+.faq .help p {
+    font-size: 1.2rem;
+}
+
+.newsletter {
+    background: var(--primary);
+}
+
+.newsletter .container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem 0;
+    align-items: flex-start;
+}
+
+.newsletter h2 {
+    color: #fff;
+}
+
+.newsletter form {
+    display: flex;
+    padding: 8px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+}
+
+.newsletter form input {
+    border: none;
+}
+
+.newsletter form button i {
+    font-size: 16px;
+}
+
+@media(min-width:480px) {
+    section.hero h1 {
+        font-size: 3.8rem;
+        line-height: 3.8rem;
+    }
+}
+
+@media(min-width:600px) {
+    section.hero:before {
+        height: 600px;
+        background: url("../assets/initial_img.png") no-repeat center top;
+        background-size: auto 600px;
+        margin-top:-8em;
+    }
+}
+
+@media(min-width: 780px) {
+    section.hero:before {
+        height: 740px;
+        background: url("../assets/initial_img.png") no-repeat center top;
+        background-size: auto 740px;
+        margin-top:-8em;
+    }
+}
+
+@media (min-width: 980px) {
+    
+    section.hero {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        min-height: 100vh;
+        padding: 140px 0;
+    }
+
+    section.hero:before{
+        margin:0;
+    }
+
+    section.hero form{
+        width: 500px;
+    }
+    section.hero h2{
+        font-size:1.6rem;
+    }
+    section.hero .container .grid {
+        width: 45%;
+        margin-top: 60px;
+        padding-right: 40px;
+    }
+
+    section.hero:before {
+        width: 53%;
+        height: 95%;
+        position: absolute;
+        background-size: auto 100%;
+        background-position: left top;
+    }
+
+    section.hero h1 {
+        font-size: 4.6rem;
+        line-height: 5rem;
+    }
+    section.fuelEconomy .grid{
+        grid-template-columns: 2fr 2fr;
+    }
+    section.fuelEconomy .sectionCard{
+        padding:2.8rem;
+        width:100%;
+    }
+    section.fuelEconomy button{
+        width: initial !important;
+    }
+    .testimonials .owl-slide {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .testimonials .owl-slide .container p{
+        text-align: left;
+        font-size:1.4rem;
+    }
+    .testimonials .owl-slide .container{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .app .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .app .app_download_links{
+        flex-direction: row;
+    }
+    .app .image-app{
+        max-width: 480px;
+        position: absolute;
+        bottom:-4px;
+        right:0;
+        display: block;
+    }
+    .app .image-app img{
+        width: 100%;
+    }
+    .faq{
+        width: 60%;
+        margin:0 auto;
+    }
+    .newsletter .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding:0.6rem 0;
+    }
+    .newsletter .container h2{
+        margin-bottom: 0;
+    }
+}
+@media(max-width:300px){
+    section.hero h1{
+        font-size:2.6rem !important;
+        line-height: 2.6rem !important;
+    }
+    section.hero form input{
+        width:80%;
+    }
+    section.hero form button{
+        flex:0
+    }
+    .fuelEconomy .grid{
+        margin:0 -8px;
+    }
+    .fuelEconomy .sectionCard{
+        width: 100%;
+    }
+    .accordion{
+        font-size:16px !important;
+    }
+    .newsletter form input{
+        width: 80%;
+    }
+}
