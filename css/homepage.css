@@ -1,3 +1,5 @@
+/** REMOVIDO **/
+/**
 section.hero {
     background: #f3f3f3;
     height: 100%;
@@ -56,6 +58,208 @@ section.hero form input {
 section.hero form button i {
     font-size: 16px;
 }
+**/
+/** REMOVIDO **/
+
+
+
+/** NOVO BLOCO **/
+section.hero {
+    padding: 0;
+}
+
+section.hero .heroBlue {
+    width: 100%;
+    position: relative;
+    background: var(--primary);
+    padding: 140px 0;
+    top: 0;
+    padding-bottom: 240px;
+    height: 100%;
+}
+
+section.hero .heroBlue:before {
+    content: "";
+    height: 40%;
+    margin: auto;
+    position: absolute;
+    background-color: transparent;
+    width: 40px;
+    left: 0;
+    bottom: 10%;
+    right: unset;
+    border: thin solid rgb(255, 255, 255, 40%);
+    border-left-color: transparent;
+    border-radius: 0 12px 12px 0;
+}
+
+section.hero .heroBlue:after {
+    content: "";
+    height: 40%;
+    margin: auto;
+    position: absolute;
+    background-color: transparent;
+    width: 80px;
+    bottom: 30%;
+    right: 0;
+    border: thin solid rgb(255, 255, 255, 40%);
+    border-right-color: transparent;
+    border-radius: 12px 0 0 12px;
+
+}
+
+section.hero .heroBlue .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: initial !important;
+}
+
+section.hero .heroBlue .initialImg {
+    width: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+}
+
+section.hero .heroBlue h1 {
+    font-size: 38px;
+    line-height: 48px;
+}
+
+section.hero .heroBlue h3 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+section.hero .heroBlue h1,
+section.hero .heroBlue h3 {
+    color: #fff;
+}
+
+section.hero .formMobile {
+    display: block;
+    z-index: 1 !important;
+    margin-top: 20px !important;
+}
+
+section.hero .formDesktop {
+    display: none;
+}
+
+section.hero .heroGrey {
+    width: 100%;
+    background: #f9f9f9;
+}
+
+section.hero .heroGrey .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 20px 0;
+}
+
+section.hero .debtForm {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 16%);
+    margin-top: -100px;
+    z-index: 2;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+
+section.hero .debtForm form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+section.hero .debtForm form input[type=text] {
+    background: #f3f3f3;
+    border: 1px solid #c0c0c0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 50px;
+    padding-left: 16px;
+    outline: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.9rem;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+section.hero .debtForm form button {
+    background: var(--secondary);
+    border: 1px solid var(--secondary);
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.9rem;
+    color: #ffffff;
+    height: 50px;
+    padding: 0 36px;
+    display: inline-block;
+    outline: 0;
+    transition: background 0.2s ease;
+}
+
+section.hero .debtForm form button:hover{
+    background: #e0bb33;
+}
+
+section.hero .debtForm h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 60%);
+    text-align: left;
+}
+
+.certificados {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.certificados div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+.certificados h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 50%)
+}
+
+.certificados img {
+    margin-right: 20px;
+    height: 20px;
+}
+.certificados img:last-child{
+    height: 40px;
+}
+
+/** NOVO BLOCO **/
+
 
 section.fuelEconomy {
     position: relative;
@@ -90,7 +294,7 @@ section.fuelEconomy .sectionCard {
     box-shadow: 0 20px 40px 0 rgb(0 0 0 / 7%);
 }
 
-section.fuelEconomy .sectionCard button{
+section.fuelEconomy .sectionCard button {
     width: 100%;
 }
 
@@ -251,12 +455,15 @@ section.fuelEconomy .sectionCard button{
 .image-app img {
     width: 100%;
 }
-.faq{
+
+.faq {
     padding: 100px 0;
 }
+
 .faq h1 {
     text-align: center;
 }
+
 .faq .accordion {
     background-color: #fff;
     color: var(--text);
@@ -353,6 +560,8 @@ section.fuelEconomy .sectionCard button{
     font-size: 16px;
 }
 
+/** REMOVIDO **/
+/**
 @media(min-width:480px) {
     section.hero h1 {
         font-size: 3.8rem;
@@ -377,11 +586,15 @@ section.fuelEconomy .sectionCard button{
         margin-top:-8em;
     }
 }
+**/
+/** REMOVIDO **/
+
 
 @media (min-width: 980px) {
-    
-    section.hero {
-        display: flex;
+
+    /**REMOVIDO**/
+    /**
+             display: flex;
         align-items: center;
         height: 100%;
         min-height: 100vh;
@@ -416,61 +629,139 @@ section.fuelEconomy .sectionCard button{
         font-size: 4.6rem;
         line-height: 5rem;
     }
-    section.fuelEconomy .grid{
+    **/
+    /**REMOVIDO**/
+
+    /** NOVO BLOCO **/
+    .mobile {
+        display: none !important;
+    }
+
+    .desktop {
+        display: block !important;
+    }
+
+    .certificados img {
+        margin-right: 20px;
+        height: 40px;
+    }
+    .certificados img:last-child{
+        height: 60px;
+    }
+    section.hero .heroBlue {
+        padding-top: 180px;
+        padding-bottom: 100px;
+    }
+
+    section.hero .formMobile {
+        display: none;
+        margin-top: 20px !important;
+    }
+
+    section.hero .formDesktop {
+        display: block;
+    }
+
+    section.hero .heroBlue .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    section.hero .heroBlue h1 {
+        font-size: 58px;
+        line-height: 68px;
+    }
+
+    section.hero .heroBlue h3 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    section.hero .heroBlue .initialImg {
+        width: 580px;
+        position: absolute;
+        bottom: 0;
+        right:0;
+        margin-left: auto;
+        margin-right: initial;
+    }
+
+    section.hero .heroGrey .container {
+        grid-template-columns: 1fr 2fr;
+        padding:10px 0;
+    }
+
+    /** NOVO BLOCO **/
+
+    section.fuelEconomy .grid {
         grid-template-columns: 2fr 2fr;
     }
-    section.fuelEconomy .sectionCard{
-        padding:2.8rem;
-        width:100%;
+
+    section.fuelEconomy .sectionCard {
+        padding: 2.8rem;
+        width: 100%;
     }
-    section.fuelEconomy button{
+
+    section.fuelEconomy button {
         width: initial !important;
     }
+
     .testimonials .owl-slide {
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
     }
-    .testimonials .owl-slide .container p{
+
+    .testimonials .owl-slide .container p {
         text-align: left;
-        font-size:1.4rem;
+        font-size: 1.4rem;
     }
-    .testimonials .owl-slide .container{
+
+    .testimonials .owl-slide .container {
         justify-content: flex-start;
         align-items: flex-start;
     }
-    .app .grid{
+
+    .app .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .app .app_download_links{
+
+    .app .app_download_links {
         flex-direction: row;
     }
-    .app .image-app{
+
+    .app .image-app {
         max-width: 480px;
         position: absolute;
-        bottom:-4px;
-        right:0;
+        bottom: -4px;
+        right: 0;
         display: block;
     }
-    .app .image-app img{
+
+    .app .image-app img {
         width: 100%;
     }
-    .faq{
+
+    .faq {
         width: 60%;
-        margin:0 auto;
+        margin: 0 auto;
     }
+
     .newsletter .container {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding:0.6rem 0;
+        padding: 0.6rem 0;
     }
-    .newsletter .container h2{
+
+    .newsletter .container h2 {
         margin-bottom: 0;
     }
 }
-@media(max-width:300px){
+
+@media(max-width:300px) {
+    /** REMOVIDO **/
+        /**
     section.hero h1{
         font-size:2.6rem !important;
         line-height: 2.6rem !important;
@@ -481,16 +772,21 @@ section.fuelEconomy .sectionCard button{
     section.hero form button{
         flex:0
     }
-    .fuelEconomy .grid{
-        margin:0 -8px;
+        **/
+    /** REMOVIDO **/
+    .fuelEconomy .grid {
+        margin: 0 -8px;
     }
-    .fuelEconomy .sectionCard{
+
+    .fuelEconomy .sectionCard {
         width: 100%;
     }
-    .accordion{
-        font-size:16px !important;
+
+    .accordion {
+        font-size: 16px !important;
     }
-    .newsletter form input{
+
+    .newsletter form input {
         width: 80%;
     }
 }

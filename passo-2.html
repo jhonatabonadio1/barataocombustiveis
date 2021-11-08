@@ -17,7 +17,9 @@
 
     <header>
         <nav class="internalNav">
-            <a href="/" class="logo"><img src="./assets/logo_mobile.png" alt="Kitey Pagamentos" /></a>
+            <a href="/" class="logo">
+                <!-- ALTERADO--><img src="./assets/logo_mobile.png" alt="Kitey Pagamentos" /><!-- ALTERADO-->
+            </a>
             <button class="toggle"><i class="fas fa-bars"></i></button>
             <ul>
                 <button class="toggle toggleTimes"><i class="fas fa-times"></i></button>
@@ -25,7 +27,6 @@
                 <li><a class="disabled">Minha conta</a></li>
                 <li><a class="disabled">Carrinho de compras</a></li>
                 <li><a class="disabled">Ajuda</a></li>
-                <li><a href="/" class="btn-nav">Comprar combustível</a></li>
             </ul>
             </div>
         </nav>
@@ -35,7 +36,9 @@
 
             <div class="sideLeft">
                 <a href="#" class="logo">
-                    <img src="./assets/logo_mobile.png" alt="">
+                    <!-- ALTERADO-->
+                    <img src="./assets/icone.svg" alt="">
+                    <!-- ALTERADO-->
                 </a>
                 <div class="sidebar-link">
                     <div class="menu-link active">
@@ -239,28 +242,7 @@
                         <h4 class="borderTop">Resumo da compra</h4>
                     </div>
                     <div class="cart" name="cart">
-                        <!-- (NÃO É ESTÁTICO) ESSE ITEM ESTÁ SENDO INSERIDO POR PREPEND EM CART.JS-->
 
-                        <div class="cartItem" name="1">
-                            <div class="cartFlex">
-                                <div class="cartInfo">
-                                    <strong>x5</strong>
-                                    <div>
-                                        <h4>Gasolina Comum</h4>
-                                        <small>Gasolina comum</small>
-                                    </div>
-                                </div>
-                                <div class="cartPriceFlex">
-                                    <div class="cartPrice">
-                                        <div class="badge">5 Lts</div>
-                                        <input type="hidden" id="fuelCartPrice" value="${e.price}" />
-                                        <span>R$100,00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- (NÃO É ESTÁTICO) ESSE ITEM ESTÁ SENDO INSERIDO POR PREPEND EM CART.JS-->
                     </div>
                 </div>
             </div>
@@ -323,29 +305,7 @@
                         <div class="cart" name="cart">
 
 
-                            <!-- (NÃO É ESTÁTICO) ESSE ITEM ESTÁ SENDO INSERIDO POR PREPEND EM CART.JS-->
 
-                            <div class="cartItem" name="1">
-                                <div class="cartFlex">
-                                    <div class="cartInfo">
-                                        <strong>x5</strong>
-                                        <div>
-                                            <h4>Gasolina Comum</h4>
-                                            <small>Gasolina comum</small>
-                                        </div>
-                                    </div>
-                                    <div class="cartPriceFlex">
-                                        <div class="cartPrice">
-                                            <div class="badge">5 Lts</div>
-                                            <input type="hidden" id="fuelCartPrice" value="${e.price}" />
-                                            <span>R$100,00</span>
-                                        </div>
-                                        <a href="#" name="remove" id="cartRemove"><i class="fas fa-times"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- (NÃO É ESTÁTICO) ESSE ITEM ESTÁ SENDO INSERIDO POR PREPEND EM CART.JS-->
 
                         </div>
                     </div>
@@ -360,9 +320,9 @@
         </script>
         <script src="https://kit.fontawesome.com/4c9c458037.js" crossorigin="anonymous"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <!-- <script src="./scripts/scripts.js"></script> -->
+        <script src="./scripts/scripts.js"></script>
         <script src="./scripts/card.js"></script>
-        <!-- <script src="./scripts/checkout.js"></script> -->
+        <script src="./scripts/checkout.js"></script>
 
         <script>
 
