@@ -4,6 +4,7 @@ header {
     z-index: 2;
 }
 
+/** ALTERADO **/
 header nav {
     margin-top: 20px;
     border-radius: 10px;
@@ -16,7 +17,9 @@ header nav {
     -webkit-transform: skew(-14.4deg);
     -ms-transform: skew(-14.4deg);
 }
+/** ALTERADO **/
 
+/** ALTERADO **/
 header nav .flex {
     display: flex;
     justify-content: space-between;
@@ -26,20 +29,25 @@ header nav .flex {
     -webkit-transform: skew(14.4deg);
     -ms-transform: skew(14.4deg);
 }
+/** ALTERADO **/
 
+/** ALTERADO **/
 header nav .logo .logo-desktop {
     width: 300px;
     display: none;
 }
+/** ALTERADO **/
 
 header nav .logo .logo-mobile {
     display: block;
 }
 
+/** ALTERADO **/
 header nav .logo img {
     width: 80px;
     margin-top: 0px;
 }
+/** ALTERADO **/
 
 header nav .navMenu {
     display: flex;
@@ -145,12 +153,13 @@ header nav .navMenu {
         display: flex;
         justify-content: space-between;
     }
-
+    /** ALTERADO **/
     header nav .logo {
         position: relative;
         margin-top: 17px;
         margin-left: -9px;
     }
+    /** ALTERADO **/
 
     header nav .logo .logo-desktop {
         display: block;
