@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Baratão Combustíveis</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="theme-color" content="#fdfdfd">
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/global.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/header.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/login.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/footer.css'>
+
+    <!-- OWL Carousel -->
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/owl.carousel.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/owl.theme.default.min.css'>
+    <!-- END OWL Carousel -->
+
+    <link rel="shortcut icon" href="./assets/logo_mobile.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="flex" id="page-auth">
+        <aside>
+            <img src="./assets/care.jpg" alt="">
+        </aside>
+        <main>
+            <a href="./" class="goBack"><i class="fas fa-arrow-left"></i></a>
+            <img src="./assets/icone.svg" />
+            <h1>Crie uma conta</h1>
+            <form action="/account" method="get">
+                <div class="inputGrid">
+                    <div>
+                        <label>Nome</label>
+                        <input class="form-control" placeholder="Ex: João" type="text" name="firstname" id="">
+                    </div>
+                    <div>
+                        <label>Sobrenome</label>
+                        <input class="form-control" placeholder="Ex: Ferreira" type="text" name="lastname" id="">
+                    </div>
+                </div>
+                <div>
+                    <label>Telefone</label>
+                    <input class="form-control" placeholder="Ex: (61) 99999-9999" type="text" name="phone" id="">
+                </div>
+                <div>
+                    <label>E-mail</label>
+                    <input class="form-control" placeholder="email@exemplo.com" type="email" name="email" id="">
+                </div>
+                <div>
+                    <label>Senha</label>
+                    <input class="form-control" placeholder="*********" type="password" name="password" id="">
+                </div>
+                <button type="submit" class="btn btn-primary">Criar conta</button>
+            </form>
+            <p>Já possui uma conta? <a href="./login.html">Faça o login!</a></p>
+        </main>
+    </div>
+
+    <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <script src="https://kit.fontawesome.com/4c9c458037.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./scripts/scripts.js"></script>
+</body>

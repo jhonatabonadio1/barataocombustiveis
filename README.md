@@ -26,3 +26,13 @@ passo-1.html
 passo-2.html
 homepage.css
 header.css
+
+## O que foi alterado/adicionado/removido
+
+- Foi criado um novo hero (igual da kitey)
+- Foi adicionado uma janela modal para mostrar os postos disponíveis
+- Foi adicionado os scripts da janela modal em scripts.js
+- Foi adicionado os estilos do hero no css (homepage.css)
+- Foi alterado as logos de png para svg (index.html, passo-1 e passo-2)
+- Foi criado telas de autenticação
+- Foi criado um arquivo login.css para armazenar os estilos das telas de autenticação

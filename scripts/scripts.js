@@ -27,6 +27,8 @@ $(".toggleTimes").click(function () {
   $(".toggleTimes").addClass("hidden")
 })
 
+/** NOVO BLOCO */
+
 $('#openCheckoutModal').click(function () {
   $('.checkoutModal').addClass('active');
   $('.modalMask').addClass('active');
@@ -38,6 +40,8 @@ $('#closeCheckoutModal').click(function () {
   $('.modalMask').removeClass('active');
   $('body').removeClass('overflow-hidden');
 })
+
+/** NOVO BLOCO */
 
 
 var acc = document.getElementsByClassName("accordion");
@@ -78,3 +82,30 @@ $('#hiddenCheckout').click(function () {
   $('.modalMask').removeClass("active")
   $('html, body').removeClass("noScroll")
 })
+
+$("[data-target=regionModal]").click(function() {
+  if($(this).parents("form").find("#regionInput").val()){
+    $("#regionModal").fadeIn() 
+  }
+})
+
+$("#regionModal #closeModal").click(function() {
+  $("#regionModal").fadeOut()
+})
+
+function emptyStation(){
+  Swal.fire({
+    title: 'Atenção',
+    text: "No momento, não existem postos credênciados em região, deseja continuar?",
+    icon: 'warning',
+    showCancelButton: true,
+    focusConfirm: false,
+    confirmButtonColor: '#00894b',
+    confirmButtonText: 'Sim, quero continuar!',
+    cancelButtonText: "Cancelar"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "./passo-1.html"
+    }
+  })
+}

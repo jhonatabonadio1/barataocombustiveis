@@ -6,6 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Baratão Combustíveis</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="theme-color" content="#fdfdfd">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/global.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/header.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/homepage.css'>
@@ -25,8 +26,8 @@
             <nav class="navbar">
                 <div class="flex">
                     <div class="logo">
-                        <img src="./assets/logo.svg" alt="" class="logo-desktop">
-                        <img src="./assets/icone.svg" alt="" class="logo-mobile">
+                        <img src="./assets/logo.svg" alt="logo" class="logo-desktop">
+                        <img src="./assets/icone.svg" alt="logo_mobile" class="logo-mobile">
                     </div>
                     <div class="navMenu">
                         <a href="#">
@@ -39,7 +40,7 @@
                             <div class="navLink dropdown user"></div>
                             <div class="dropdown-menu">
                                 <span>Olá, <strong>visitante</strong></span>
-                                <a href="#" class="btn">Acessar minha conta</a>
+                                <a href="./login.html" class="btn">Acessar minha conta</a>
                             </div>
                         </div>
                     </div>
@@ -88,11 +89,12 @@
                 </div>
 
                 <div class="debtForm formMobile">
-                    <form action="/passo-1.html" accept-charset="UTF-8" method="get">
+                    <form accept-charset="UTF-8" method="get">
 
-                        <input class="input" required="required" placeholder="Digite sua localização" type="text" />
-                        <button type="submit" name="commit" value="Consultar grátis" style="display: inline"
-                            data-disable-with="Consultar agora">Selecionar região</button>
+                        <input class="input" required="required" placeholder="Digite sua localização" id="regionInput"
+                            type="text" />
+                        <button type="button" style="display: inline" data-disable-with="Consultar agora"
+                            data-target="regionModal">Selecionar região</button>
                     </form>
                     <h3>Hoje você vai economizar <b>R$0,14</b> na gasolina.</h3>
                 </div>
@@ -105,11 +107,12 @@
         <div class="heroGrey">
             <div class="container">
                 <div class="debtForm formDesktop">
-                    <form action="/passo-1.html" accept-charset="UTF-8" method="get">
+                    <form accept-charset="UTF-8" method="get">
 
-                        <input class="input" required="required" placeholder="Digite sua localização" type="text" />
-                        <button type="submit" name="commit" value="Consultar grátis" style="display: inline"
-                            data-disable-with="Consultar agora">Selecionar região</button>
+                        <input class="input" required="required" placeholder="Digite sua localização" id="regionInput"
+                            type="text" />
+                        <button type="button" name="commit" style="display: inline" data-target="regionModal">Selecionar
+                            região</button>
                     </form>
                     <h3>Hoje você vai economizar <b>R$0,14</b> na gasolina.</h3>
 
@@ -131,6 +134,85 @@
     </section>
     <!--NOVO BLOCO-->
 
+
+    <!--NOVO BLOCO-->
+    <div id="regionModal" class="regionModal" style="display: none;">
+        <div class="container">
+            <div class="modal">
+                <div class="modalHeader">
+                    <div>
+                        <h2>Postos credênciados em: <strong>Brasília</strong></h2>
+                    </div>
+                    <button id="closeModal" class="closeButton">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modalBody">
+                    <div class="modalContent active">
+                        <div class="empty">
+                            <h2>Não existem postos credênciados em sua região :(</h2>
+                        </div>
+                        <div class="flex postos active">
+                            <div class="flexItem">
+                                <div class="postoInfo">
+                                    <div class="postoImg">
+                                        <img src="./assets/shell.png" />
+                                    </div>
+                                    <div>
+                                        <h3>Posto Shell</h3>
+                                        <span>QE 38 Conj M. Casa 08</span>
+                                        <a href="#" target="_blank">Ver no mapa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flexItem">
+                                <div class="postoInfo">
+                                    <div class="postoImg">
+                                        <img src="./assets/petrobras.png" />
+                                    </div>
+                                    <div>
+                                        <h3>Posto BR</h3>
+                                        <span>QE 38 Conj M. Casa 08</span>
+                                        <a href="#" target="_blank">Ver no mapa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flexItem">
+                                <div class="postoInfo">
+                                    <div class="postoImg">
+                                        <img src="./assets/petrobras.png" />
+                                    </div>
+                                    <div>
+                                        <h3>Posto BR</h3>
+                                        <span>QE 38 Conj M. Casa 08</span>
+                                        <a href="#" target="_blank">Ver no mapa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flexItem">
+                                <div class="postoInfo">
+                                    <div class="postoImg">
+                                        <img src="./assets/petrobras.png" />
+                                    </div>
+                                    <div>
+                                        <h3>Posto BR</h3>
+                                        <span>QE 38 Conj M. Casa 08</span>
+                                        <a href="#" target="_blank">Ver no mapa</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <b>0 resultados encontrados</b>
+                    <button class="btn btn-primary" onClick="emptyStation()">Continuar</button>
+                    <!-- CASO NÃO EXISTA NENHUM POSTO, MOSTRAR O ALERTA-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--NOVO BLOCO-->
 
     <section class="fuelEconomy">
         <div class="container">
@@ -399,7 +481,7 @@
                         <p>CNPJ 41.524.064/0001-79</p>
                     </div>
                     <div>
-                        <img src="./assets/logo_mobile.png" alt="">
+                        <img src="./assets/logo.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -415,6 +497,7 @@
 </script>
 <script src="https://kit.fontawesome.com/4c9c458037.js" crossorigin="anonymous"></script>
 <script src="./scripts/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="./scripts/scripts.js"></script>
 
 <script>

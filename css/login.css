@@ -1,0 +1,105 @@
+#page-auth{
+    display:flex;
+    justify-content: stretch;
+    height:100vh;
+}
+
+#page-auth aside{
+    flex:8;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-auth aside img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page-auth main{
+    flex:7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+}
+
+#page-auth .goBack{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    font-size: 28px;
+}
+
+#page-auth main img{
+    width: 80px;
+    padding-bottom:40px;
+}
+
+#page-auth main h1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+#page-auth main form{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    font-size: 14px;
+    width: 80%;
+    border-bottom: 1px solid rgba(0,0,0, 10%);
+    padding-bottom: 30px;
+}
+#page-auth main form div label{
+    margin-left: 25px;
+    background:#fff;
+    position: relative;
+    padding:0 10px;
+}
+#page-auth main form .form-control{
+   height: 56px;
+   padding:0 20px;
+   margin-top: -10px;
+   font-size: 16px;
+   width: 100%;
+}
+
+#page-auth main form .inputGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap:10px;
+}
+
+#page-auth main form .btn{
+    height: 56px;
+    font-size:16px;
+}
+
+#page-auth main form a{
+    text-align: center;
+    font-size: 16px;
+    margin-top:10px;
+}
+
+#page-auth main p{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+@media(min-width:980px){
+    #page-auth aside{
+        display: flex;
+    }
+    #page-auth main form{
+        width: 50%;
+    }
+    
+}
+
