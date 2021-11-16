@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Baratão Combustíveis</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="theme-color" content="#fdfdfd">
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/global.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/postos.css'>
+
+    <link rel="shortcut icon" href="./assets/logo_mobile.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="stores">
+        <aside id="map"></aside>
+        <button class="btn btn-primary mobileFixed">Comprar combustível</button>
+        <main>
+            <header>
+                <div class="header-info">
+                    <div class="logo">
+                        <img src="./assets/logo.svg" alt="" class="">
+                    </div>
+                    <div>
+                        <a href="./" class="icon"><i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+
+                <form action="#">
+                    <select name="" id="region">
+                        <option value="BR">Brasil</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                    </select>
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+                <h2 id="storesCount"></h2>
+            </header>
+            <div class="stores-body">
+                <div class="flex" id="storesList"></div>
+            </div>
+            <footer>
+                <button class="btn btn-primary">Comprar combustível</button>
+            </footer>
+        </main>
+    </div>
+</body>
+
+<script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://code.jquery.com/jquery-3.6.0.min.js">
+</script>
+<script src="https://kit.fontawesome.com/4c9c458037.js" crossorigin="anonymous"></script>
+<script src="./scripts/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./scripts/scripts.js"></script>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1iZBsPzAQjXH4eR-bLSfR24tZc55smmY&callback=initMap"></script>
+<script src="./scripts/map.js"></script>
+
+
+</html>

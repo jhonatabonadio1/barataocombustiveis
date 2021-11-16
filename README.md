@@ -1,38 +1,11 @@
-# Nova página inicial
+Novos arquivos:
 
-- Foi criado um novo hero para a página inicial e adicionado novas imagens
+./scripts/map.js
+./postos.html
+./css/postos.css
 
-logo.svg
-icone.svg
-initial2.png
+Arquivos alterados:
 
-
-## HTML 
-
-O que foi removido está marcado com <!-- REMOVIDO -->
-O que foi alterado está marcado com <!-- ALTERADO -->
-O que foi adicionado está marcado com <!-- NOVO BLOCO -->
-
-## CSS
-
-O que foi removido está marcado com /**REMOVIDO**/
-O que foi alterado está marcado com /**ALTERADO**/
-O que foi adicionado está marcado com /**NOVO BLOCO**/
-
-## Arquivos alterados:
-
-index.html
-passo-1.html
-passo-2.html
-homepage.css
-header.css
-
-## O que foi alterado/adicionado/removido
-
-- Foi criado um novo hero (igual da kitey)
-- Foi adicionado uma janela modal para mostrar os postos disponíveis
-- Foi adicionado os scripts da janela modal em scripts.js
-- Foi adicionado os estilos do hero no css (homepage.css)
-- Foi alterado as logos de png para svg (index.html, passo-1 e passo-2)
-- Foi criado telas de autenticação
-- Foi criado um arquivo login.css para armazenar os estilos das telas de autenticação
+index.html (Removido modal e redirecionando links para postos.html)
+scripts.js (Removido scritps do modal)
+global.css (Troca o line-height do h1 dentro de @media(min-width: 700) de 38px para 48px)

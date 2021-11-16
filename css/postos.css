@@ -1,0 +1,272 @@
+body,html {
+    overflow: hidden;
+}
+#stores main::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+}
+
+#stores main::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+    margin:10px;
+}
+
+#stores main::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#stores main::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#stores main::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#stores{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: stretch;
+}
+#stores #map{
+    width:100%;
+    height: 100vh;
+    background-color: #222;
+}
+#stores #map #content .firstHeading{
+    font-size:20px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color:#4c535f;
+}
+#stores #map #content span{
+    color:#9db0c0;
+}
+#stores #map #content p{
+    font-size:14px;
+    font-weight: bold;
+    color:#4c535f;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+#stores #map #content a{
+    color:var(--primary);
+    font-size:14px;
+    font-weight: normal;
+}
+#stores #map #content a:hover{
+    text-decoration: underline;
+    opacity:1;
+}
+#stores main{
+    width:100%;
+    position: fixed;
+    bottom:0;
+    right:0;
+    height: 40vh;
+    box-shadow: 10px 0 20px 10px rgba(0,0,0, 10%);
+    background:#fff;
+    padding:20px;
+    max-height: 40vh;
+    border-radius: 20px 20px 0 0;
+    overflow: auto;
+}
+#stores main header{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:20px;
+}
+#stores main header .header-info{
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0, 10%);
+    padding-bottom:20px;
+    align-items: center;
+}
+#stores main header .logo img{
+    width: 200px;
+}
+#stores main header .icon{
+    color:#00894b;
+}
+#stores main header .icon i{
+    font-size: 24px;
+}
+#stores main header form{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 6px;
+    padding:5px;
+    background: #f3f3f3;
+}
+#stores main header form select{
+    padding:15px 10px;
+    background:transparent;
+    border-radius: 5px 0 0 5px;
+    border:none;
+    font-size:14px;
+    color:#222;
+    flex:6;
+    appearance: none;
+}
+#stores main header form button{
+    border:none;
+    background:transparent;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    height: 40px;
+    width: 40px;
+    color:#fff;
+    margin:0 5px;
+    transition: background .12s ease;
+}
+
+#stores main header form button:hover{
+    background:var(--hover-secondary)
+}
+
+#stores main header form select:focus, 
+#stores main header form button:focus,
+#stores main header form select:active, 
+#stores main header form button:active{
+    outline: 0;
+}
+
+#stores main header h2{
+    font-size:18px;
+    margin:0;
+    color:#9db0c0;
+}
+
+#stores main header h2 b{
+    color:#4c535f;
+}
+
+#stores .stores-body::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+}
+
+#stores .stores-body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}
+
+#stores .stores-body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#stores .stores-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#stores .stores-body::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#stores .stores-body{
+    margin:20px 0;
+    height: 100%;
+}
+
+#stores .stores-body .flex{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding-bottom: 20px;
+}
+#stores .stores-body .flex .item{
+    display: flex;
+    gap:20px;
+    border:1px solid rgba(0,0,0, 6%);
+    border-radius:8px;
+    box-shadow:0px 4px 5px 1px rgb(0,0,0, 3%);
+    padding:20px;
+    cursor:pointer;
+    transition:background .12s ease;
+}
+#stores .stores-body .flex .item:hover{
+    background:#e9f2f4;
+}
+#stores .stores-body .flex .item.active{
+    background:#e9f2f4;
+}
+#stores .stores-body .flex .item .store-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#stores .stores-body .flex .item .store-info h4{
+    font-size: 16px;
+    color:#4c535f;
+}
+#stores .stores-body .flex .item .store-info span{
+    margin-bottom: 10px;
+    color:#9db0c0;
+    font-size:14px;
+    max-width: 250px;
+}
+#stores .stores-body .flex .item .store-info p i{
+    margin-right: 10px;
+    color:#c3d1dd;
+}
+#stores .stores-body .flex .item .store-info p{
+    margin-bottom: 0;
+    color:#4c535f;
+    font-size:14px;
+}
+#stores .stores-body .flex .item .store-icon{
+    height:50px;
+    width: 50px;
+    background:#fff;
+    box-shadow:0px 3px 5px 2px rgb(0,0,0, 6%);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 6px;
+}
+#stores footer{
+    display: none;
+    justify-content: flex-end;
+    width: 100%;
+}
+#stores .mobileFixed{
+    position: fixed;
+    bottom:40vh;
+    right:10px;
+    margin:10px 0;
+}
+
+@media(min-width: 980px){
+    #stores main{
+        width:400px;
+        bottom:0 !important;
+        height: 100vh !important;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    #stores footer{
+        display: flex;
+    }
+    #stores .mobileFixed{
+        display: none;
+    }
+    #stores main header .header-info{
+        display: flex;
+    }
+    #stores .stores-body{
+        margin:20px 0;
+        max-height: 450px;
+        overflow-y: auto;
+        height: 450px;
+    }
+}

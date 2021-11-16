@@ -89,11 +89,11 @@
                 </div>
 
                 <div class="debtForm formMobile">
-                    <form accept-charset="UTF-8" method="get">
+                    <form id="region-form" accept-charset="UTF-8" method="get" action="/postos.html">
 
                         <input class="input" required="required" placeholder="Digite sua localização" id="regionInput"
                             type="text" />
-                        <button type="button" style="display: inline" data-disable-with="Consultar agora"
+                        <button type="submit" style="display: inline" data-disable-with="Consultar agora"
                             data-target="regionModal">Selecionar região</button>
                     </form>
                     <h3>Hoje você vai economizar <b>R$0,14</b> na gasolina.</h3>
@@ -107,11 +107,11 @@
         <div class="heroGrey">
             <div class="container">
                 <div class="debtForm formDesktop">
-                    <form accept-charset="UTF-8" method="get">
+                    <form id="region-form" accept-charset="UTF-8" method="get" action="/postos.html">
 
                         <input class="input" required="required" placeholder="Digite sua localização" id="regionInput"
                             type="text" />
-                        <button type="button" name="commit" style="display: inline" data-target="regionModal">Selecionar
+                        <button type="submit" name="commit" style="display: inline" data-target="regionModal">Selecionar
                             região</button>
                     </form>
                     <h3>Hoje você vai economizar <b>R$0,14</b> na gasolina.</h3>
@@ -132,87 +132,6 @@
             </div>
         </div>
     </section>
-    <!--NOVO BLOCO-->
-
-
-    <!--NOVO BLOCO-->
-    <div id="regionModal" class="regionModal" style="display: none;">
-        <div class="container">
-            <div class="modal">
-                <div class="modalHeader">
-                    <div>
-                        <h2>Postos credênciados em: <strong>Brasília</strong></h2>
-                    </div>
-                    <button id="closeModal" class="closeButton">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="modalBody">
-                    <div class="modalContent active">
-                        <div class="empty">
-                            <h2>Não existem postos credênciados em sua região :(</h2>
-                        </div>
-                        <div class="flex postos active">
-                            <div class="flexItem">
-                                <div class="postoInfo">
-                                    <div class="postoImg">
-                                        <img src="./assets/shell.png" />
-                                    </div>
-                                    <div>
-                                        <h3>Posto Shell</h3>
-                                        <span>QE 38 Conj M. Casa 08</span>
-                                        <a href="#" target="_blank">Ver no mapa</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flexItem">
-                                <div class="postoInfo">
-                                    <div class="postoImg">
-                                        <img src="./assets/petrobras.png" />
-                                    </div>
-                                    <div>
-                                        <h3>Posto BR</h3>
-                                        <span>QE 38 Conj M. Casa 08</span>
-                                        <a href="#" target="_blank">Ver no mapa</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flexItem">
-                                <div class="postoInfo">
-                                    <div class="postoImg">
-                                        <img src="./assets/petrobras.png" />
-                                    </div>
-                                    <div>
-                                        <h3>Posto BR</h3>
-                                        <span>QE 38 Conj M. Casa 08</span>
-                                        <a href="#" target="_blank">Ver no mapa</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flexItem">
-                                <div class="postoInfo">
-                                    <div class="postoImg">
-                                        <img src="./assets/petrobras.png" />
-                                    </div>
-                                    <div>
-                                        <h3>Posto BR</h3>
-                                        <span>QE 38 Conj M. Casa 08</span>
-                                        <a href="#" target="_blank">Ver no mapa</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modalFooter">
-                    <b>0 resultados encontrados</b>
-                    <button class="btn btn-primary" onClick="emptyStation()">Continuar</button>
-                    <!-- CASO NÃO EXISTA NENHUM POSTO, MOSTRAR O ALERTA-->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--NOVO BLOCO-->
 
     <section class="fuelEconomy">
         <div class="container">
@@ -221,7 +140,8 @@
                 <div class="sectionCard">
                     <h1>Você pode economizar até R$0,70 por litro</h1>
                     <h2>Consulte agora os postos credênciados em sua região.</h2>
-                    <button class="btn btn-secondary btn-lg">Ver postos credênciados</button>
+                    <button class="btn btn-secondary btn-lg" onClick="window.location.href = './postos.html'">Ver postos
+                        credênciados</button>
                 </div>
             </div>
         </div>
@@ -431,7 +351,7 @@
                     <div>
                         <h5>AJUDA</h5>
                         <ul>
-                            <li><a href="#">Postos credênciados</a></li>
+                            <li><a href="./postos.html">Postos credênciados</a></li>
                             <li><a href="#">Atendimento físico</a></li>
                             <li><a href="#">Perguntas frequêntes</a></li>
                             <li><a href="#">Suporte online</a></li>

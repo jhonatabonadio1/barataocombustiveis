@@ -27,8 +27,6 @@ $(".toggleTimes").click(function () {
   $(".toggleTimes").addClass("hidden")
 })
 
-/** NOVO BLOCO */
-
 $('#openCheckoutModal').click(function () {
   $('.checkoutModal').addClass('active');
   $('.modalMask').addClass('active');
@@ -40,9 +38,6 @@ $('#closeCheckoutModal').click(function () {
   $('.modalMask').removeClass('active');
   $('body').removeClass('overflow-hidden');
 })
-
-/** NOVO BLOCO */
-
 
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -83,16 +78,6 @@ $('#hiddenCheckout').click(function () {
   $('html, body').removeClass("noScroll")
 })
 
-$("[data-target=regionModal]").click(function() {
-  if($(this).parents("form").find("#regionInput").val()){
-    $("#regionModal").fadeIn() 
-  }
-})
-
-$("#regionModal #closeModal").click(function() {
-  $("#regionModal").fadeOut()
-})
-
 function emptyStation(){
   Swal.fire({
     title: 'Atenção',
@@ -109,3 +94,15 @@ function emptyStation(){
     }
   })
 }
+
+$("#toggleFilters").click(function () {
+  $("#filters").slideToggle()
+  if ($("#toggleFilters").find("i").hasClass("fa-chevron-down")) {
+      $("#toggleFilters").find("i").removeClass("fa-chevron-down")
+      $("#toggleFilters").find("i").addClass("fa-chevron-up")
+  } else {
+      $("#toggleFilters").find("i").removeClass("fa-chevron-up")
+      $("#toggleFilters").find("i").addClass("fa-chevron-down")
+  }
+
+})

@@ -7,6 +7,7 @@
     padding:0;
 }
 
+
 :root {
     --primary: #00894b;
     --secondary: #f4ce3f;
@@ -240,7 +241,7 @@ select{
     }
     h1{
         font-size:38px;
-        line-height: 38px;
+        line-height: 48px;
     }
     h2{
         font-size:24px;
