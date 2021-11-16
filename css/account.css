@@ -1094,7 +1094,7 @@ header .container .flex .right .logo img{
 
 @media(min-width: 1280px){
     .wallet .grid{
-        width: 80%;
+        width: 100%;
     }  
     .addCard .grid{
         display: grid;
@@ -1198,6 +1198,11 @@ header .container .flex .right .logo img{
     .filter {
         width: 100%;
     }
+}
+@media(min-width: 1550px){
+    .wallet .grid{
+        width: 80%;
+    }  
 }
 @media(min-width: 1600px){
     .addCard .grid .card-wrapper{

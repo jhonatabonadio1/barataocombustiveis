@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
-    <title>Cupom #76582 | Baratão Combustíveis</title>
+    <title>Sucesso #76582 | Baratão Combustíveis</title>
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/qrcode.css" />
     <link rel="shortcut icon" href="./assets/logo_mobile.png" type="image/x-icon">
@@ -21,13 +21,13 @@
         </header>
         <main>
             <div class="voucherAlert">
-                <h2>Aproxime do leitor</h2>
-                <p>Vá até um posto credênciado e aproxime o QR Code do leitor.</p>
+                <h2>Sucesso</h2>
+                <p>Obrigado por usar o Baratão, esperamos vê-lo em breve.</p>
             </div>
-            <div class="qrCode">
-                <img src="./assets/qr-code.svg" alt="">
+            <div class="qrCodeDone">
+                <img src="./assets/done.svg" alt="">
             </div>
-            <button class="btn btn-primary" onClick="scan()">Escanear</button>
+            <button class="btn btn-primary" onClick="window.location.href = './orders.html'">Meus pedidos</button>
         </main>
         <div class="logo">
             <img src="./assets/logo.svg" alt="">
@@ -48,9 +48,6 @@
                 showConfirmButton: false,
                 timer: 3000,
                 timerProgressBar: true,
-            }).then((result) => {
-                /* Read more about handling dismissals below */
-                window.location.href = "./qrcodesuccess.html"
             })
         }
     </script>
