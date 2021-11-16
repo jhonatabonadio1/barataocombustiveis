@@ -1,0 +1,103 @@
+#voucher{
+    display: flex;
+    width: 100vw;
+    height:100vh;
+    padding:20px;
+    background:#fff;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:0 auto;
+}
+#voucher header{
+    display: flex;
+    justify-content: space-between;
+    margin-top:0px;
+}
+#voucher header a {
+    font-size:32px;
+}
+#voucher main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:3.5rem;
+}
+#voucher main .voucherAlert{
+    width: 100%;
+    background:#e0dfdf;
+    padding:20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#voucher main .voucherAlert h2{
+    color:#222;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#voucher main .voucherAlert p{
+    margin-bottom: 0;
+    color:#222;
+    font-size:18px;
+}
+#voucher main .qrCode {
+    width: 200px;
+    height: 200px;
+    background:url("../assets/qrcode-mask.png");
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#voucher main .qrCode img{
+    width: 150px;
+    height:150px;
+}
+#voucher main button{
+    font-size:16px;
+    height:50px;
+    width: 180px;
+}
+#voucher .logo {
+    margin:0 auto;
+    margin-top:2rem;
+}
+#voucher .logo img{
+    width: 200px;
+}
+@media(min-width: 980px){
+    #voucher{
+        width: 70vw;
+    }
+    #voucher main .voucherAlert{
+        width: 80%;
+    }
+    #voucher main .qrCode {
+        width:250px;
+        height:250px;
+    }
+    #voucher main .qrCode img{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media(min-width: 1100px){
+    #voucher{
+        width: 40vw;
+    }
+    #voucher main .voucherAlert{
+        width: 80%;
+    }
+    #voucher main .qrCode {
+        width:250px;
+        height:250px;
+    }
+    #voucher main .qrCode img{
+        width: 200px;
+        height: 200px;
+    }
+}

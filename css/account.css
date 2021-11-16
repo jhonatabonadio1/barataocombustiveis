@@ -1,0 +1,1218 @@
+
+
+/****************/
+/****GLOBAL*****/
+/****************/
+
+body {
+    background: #f3f3f8;
+}
+#account {
+    position: relative;
+    overflow: auto;
+}
+
+
+.btn {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    border: 1px solid #37375C;
+    line-height: 50px;
+    border-radius: 15px;
+    color: #37375C;
+    transition: background .12s ease !important;
+}
+
+.btn:hover {
+    background: #37375C;
+    color: #fff;
+    opacity: 1;
+}
+
+.btn.blue {
+    border-color: #6969DF;
+    background: #fff;
+    color: #6969DF;
+}
+
+.btn.blue:hover {
+    border-color: #6969DF;
+    background: #6969DF;
+    color: #fff;
+}
+
+.btn.purple {
+    border-color: #B548C6;
+    background: #fff;
+    color: #B548C6;
+}
+
+.btn.purple:hover {
+    border-color: #B548C6;
+    background: #B548C6;
+    color: #fff;
+}
+
+
+#account main::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+}
+
+#account main::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+    margin: 10px;
+}
+
+#account main::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#account main::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#account main::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#toggleNav{
+    border:none;
+    font-size:32px;
+    color:#fff;
+    background:#37375C;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    z-index: 1;
+    right:20px;
+    bottom:20px;
+    border-radius: 50%;
+}
+#toggleNav i{
+    line-height: 60px;
+}
+
+/****************/
+/****GLOBAL*****/
+/****************/
+
+
+/****************/
+/****ASIDE*****/
+/****************/
+
+
+
+#account aside::-webkit-scrollbar {
+    display: none;
+}
+
+
+#account aside {
+    background: #f3f3f8;
+    position: fixed;
+    display: none;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px 0;
+    width: 350px;
+    overflow-y: auto;
+    z-index:2;
+}
+
+#account aside.active{
+    display: block;
+    background:#fff;
+    width: 300px;
+    left:-300px ;
+}
+#account aside.active .aside-body .aside-item{
+    gap:10px;
+}
+#account aside.active .aside-body .aside-item h3{
+    font-size:16px;
+}
+#account aside.active .aside-body .aside-item .icon{
+    font-size:16px;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 14px;
+}
+#account aside.active .aside-body .aside-item .icon i{
+    line-height: 35px;
+}
+#account aside.active .aside-header .user-info img{
+    width: 45px;
+    height: 45px;
+}
+#account aside.active .aside-header .user-info span{
+    font-size:12px;
+}
+
+#account aside.active .aside-body .aside-item:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #DDDDED;
+    left: 20px;
+    bottom: 0;
+}
+
+
+#asideMask{
+    width: 100vw;
+    z-index:1;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0, 50%);
+}
+
+#asideMask.active{
+    display: block;
+}
+
+
+#account aside .aside-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#account aside .aside-header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#account aside .aside-header img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+#account aside .aside-header h3 {
+    margin-bottom: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+#account aside .aside-header span {
+    font-size: 14px;
+}
+
+#account aside .aside-header .settings {
+    background: #DDDDED;
+    color: #a2a2bd;
+    border-radius: 14px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+}
+
+#account aside .aside-header .settings i {
+    line-height: 35px;
+}
+
+#account aside .aside-body h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 80px;
+    margin-top: 40px;
+}
+
+#account aside .aside-body .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+#account aside .aside-body .aside-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0;
+    padding-left: 20px;
+    padding-right: 80px;
+    position: relative;
+    transition: background 0.2s ease;
+
+}
+
+#account aside .aside-body .aside-item:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #DDDDED;
+    width: 80%;
+    left: 0;
+    bottom: 0;
+}
+
+#account aside .aside-body .aside-item:last-child:before {
+    width: 0;
+    height: 0;
+}
+
+#account aside .aside-body .aside-item:after {
+    transition: background 0.2s ease;
+}
+
+#account aside .aside-body .aside-item:hover:after,
+#account aside .aside-body .aside-item.active:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: #222;
+    width: 3px;
+    right: 0px;
+    bottom: 0;
+}
+
+#account aside .aside-body .aside-item:hover {
+    opacity: 1;
+}
+
+#account aside .aside-body .aside-item:hover h3,
+#account aside .aside-body .aside-item.active h3 {
+    color: #222;
+}
+
+#account aside .aside-body .aside-item .icon {
+    background: #DDDDED;
+    color: #a2a2bd;
+    border-radius: 16px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+}
+
+#account aside .aside-body .aside-item .icon i {
+    line-height: 45px;
+}
+
+#account aside .aside-body .aside-item h3 {
+    margin-bottom: 0;
+    color: #999;
+    font-weight: bold;
+}
+
+#account aside .aside-body .aside-item.blue .icon {
+    background: #6969DF;
+    color: #fff;
+}
+
+#account aside .aside-body .aside-item.blue:hover:after,
+#account aside .aside-body .aside-item.blue.active:after {
+    background: #6969DF;
+}
+
+#account aside .aside-body .aside-item.red .icon {
+    background: #f55050;
+    color: #fff;
+}
+
+#account aside .aside-body .aside-item.red:hover:after,
+#account aside .aside-body .aside-item.red.active:after {
+    background: #f55050;
+}
+
+#account aside .aside-body .aside-item.yellow .icon {
+    background: #FF8700;
+    color: #fff;
+}
+
+#account aside .aside-body .aside-item.yellow:hover:after,
+#account aside .aside-body .aside-item.yellow.active:after {
+    background: #FF8700;
+}
+
+#account aside .aside-body .aside-item.purple .icon {
+    background: #B548C6;
+    color: #fff;
+}
+
+#account aside .aside-body .aside-item.purple:hover:after,
+#account aside .aside-body .aside-item.purple.active:after {
+    background: #B548C6;
+}
+
+#account aside .aside-body .aside-item.green .icon {
+    background: #22B07D;
+    color: #fff;
+}
+
+#account aside .aside-body .aside-item.green:hover:after,
+#account aside .aside-body .aside-item.green.active:after {
+    background: #22B07D;
+}
+
+#account aside .aside-body .aside-item.cyan .icon {
+    background: #12CDD9;
+    color: #fff;
+}
+
+#account aside .aside-body .aside-item.cyan:hover:after,
+#account aside .aside-body .aside-item.cyan.active:after {
+    background: #12CDD9;
+}
+
+/****************/
+/****ASIDE*****/
+/****************/
+
+
+/****************/
+/****MAIN*****/
+/****************/
+
+header .container .flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:20px;
+}
+
+header .container .flex .right .logo img{
+    width: 20px;
+}
+
+
+#account main {
+    margin-left: 0;
+    padding: 40px 0;
+    border-radius: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#account main .sectionTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+#account main .sectionTitle div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#account main .sectionTitle .icon {
+    background: #DDDDED;
+    color: #a2a2bd;
+    border-radius: 16px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#account main .sectionTitle .icon i {
+    line-height: 50px;
+}
+
+#account main .sectionTitle .icon.blue {
+    color: #fff;
+    background: #6969DF;
+}
+
+#account main .sectionTitle .icon.yellow {
+    color: #fff;
+    background: #FF8700;
+}
+
+#account main .sectionTitle .icon.red {
+    color: #fff;
+    background: #f55050;
+}
+
+#account main .sectionTitle .icon.purple {
+    color: #fff;
+    background: #B548C6;
+}
+
+#account main .sectionTitle .icon.green {
+    color: #fff;
+    background: #22B07D;
+}
+
+#account main .sectionTitle .icon.cyan {
+    color: #fff;
+    background: #12CDD9;
+}
+
+#account main .sectionTitle h1 {
+    margin-bottom: 0;
+    color: #37375C;
+    font-size: 32px;
+}
+
+.main-divider {
+    border-bottom: 1px solid rgba(0, 0, 0, 10%);
+    margin: 10px 0;
+}
+
+#account main section {
+    padding:1rem 0;
+}
+
+/****************/
+/****MAIN*****/
+/****************/
+
+/************************/
+/**** MAIN > FILTER *****/
+/************************/
+
+.filter-desktop {
+    display: none !important;
+}
+
+.filter-desktop .filter{
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap:20px;
+    padding:20px 0;
+    width: 100%;
+}
+
+.filter-desktop .filter div:last-child{
+    flex:60%;
+}
+
+.filter-mobile .filter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px !important;
+    width: 100%;
+}
+
+.filter-mobile .filterHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.filter-mobile .filterHeader h3 {
+    color: #222;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.filter-mobile .filterHeader button {
+    background: #fff;
+    color: #37375C;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.filter-mobile .filter .filter-content {
+    display: flex;
+    gap: 20px;
+}
+
+.filter .inputGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.filter div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2px;
+}
+
+.filter input,
+.filter select {
+    height: 50px;
+    color: #aaa;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 10%);
+    padding: 0 12px;
+    -webkit-appearance: none;
+    font-size: 16px;
+    cursor: pointer;
+    max-width: 100% !important;
+    border-radius: 20px;
+}
+.filter input:active,
+.filter select:active,
+.filter input:focus,
+.filter select:focus{
+    outline-color: #6969DF;
+}
+
+.filter .filterBtn {
+    background: #6969DF;
+    height: 50px;
+    color: #fff;
+    padding: 0 35px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 1px solid #6969DF;
+    transition: background 0.2s ease;
+}
+
+.filter .filterBtn:hover {
+    background: #5858c5;
+}
+
+.filter div {
+    position: relative;
+}
+
+.filter label {
+    font-size: 14px;
+    left: 15px;
+    display: block;
+    position: absolute;
+    background: #fff;
+    padding: 0 5px;
+    top: -8px;
+}
+
+/************************/
+/**** MAIN > FILTER *****/
+/************************/
+
+
+/************************/
+/**** MAIN > ORDERS *****/
+/************************/
+
+
+.orders .order-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.orders .order-item {
+    display: flex;
+    flex-direction: column;
+    color: #aaa;
+    padding: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 14px;
+    transition: background .12s ease;
+    opacity: 1;
+}
+
+.orders .order-item:hover {
+    background: #f3f3f8;
+    opacity: 1;
+}
+
+.orders .order-item .order-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.orders .order-item .order-info .order-id {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.orders .order-item .order-info img {
+    width: 70px;
+    border-radius: 20px;
+}
+
+.orders .order-item h3 {
+    color: #222;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.orders .order-item .order-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap:40px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.orders .order-item .order-quantity h3 {
+    color: #37375C;
+
+}
+
+/************************/
+/**** MAIN > ORDERS *****/
+/************************/
+
+
+/********************************/
+/**** MAIN > ORDERS > BADGE *****/
+/********************************/
+
+.badge-mobile {
+    display: block;
+}
+
+.badge-desktop {
+    display: none;
+}
+
+.orders .badge {
+    background: #b7b7cc;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.badge-mobile .badge {
+    font-size: 12px;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.orders .badge.green {
+    background: #22B07D;
+}
+
+.orders .badge.red {
+    background: #f55050;
+}
+
+.orders .badge.yellow {
+    background: #fcd16d;
+}
+
+
+/********************************/
+/**** MAIN > ORDERS > BADGE *****/
+/********************************/
+
+
+
+/************************/
+/**** MAIN > WALLET *****/
+/************************/
+
+
+.wallet .grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr ;
+    gap: 20px;
+}
+
+.wallet .grid .item .card .chip img {
+    width: 65px;
+    margin-bottom: 20px;
+}
+.wallet .grid .item .card {
+    background: #ddd;
+    padding: 40px;
+    height: 250px;
+    border-radius: 20px;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.wallet .grid .deleteCard{
+    display: none !important;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0,0,0, 60%);
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius: 20px;
+    color:#fff;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity .12s ease;
+}
+
+
+.wallet .grid .item .card:hover > .deleteCard{
+    display: flex !important;
+}
+
+
+.wallet .grid .deleteCard:hover{
+    opacity:1;
+}
+
+.wallet .grid .item .card h3 {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 24px;
+    color: #222;
+}
+
+.wallet .grid .item .card div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.wallet .grid .item .card .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.wallet .grid .item .buttonGrid {
+    margin-top: 20px;
+}
+
+.wallet .grid .item .card-button {
+    padding: 15px;
+    border: 1px solid #37375C;
+    color: #37375C;
+    border-radius: 15px;
+    background: #fff;
+    transition: background .12s ease;
+}
+
+.wallet .grid .item .card-button:hover {
+    background: #37375C;
+    color: #fff;
+}
+
+.wallet .grid .item .card-button.red {
+    border-color: #f55050;
+    color: #f55050;
+}
+
+.wallet .grid .item .card-button.red:hover {
+    background: #f55050;
+    color: #fff;
+}
+
+
+/************************/
+/**** MAIN > WALLET *****/
+/************************/
+
+
+@media(min-width:980px) {
+    #asideMask{
+        display: none !important;
+    }
+    #account main .sectionTitle div {
+        gap:20px;
+    }
+    #toggleNav{
+        display: none;
+    }
+    #account main .sectionTitle {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #account aside {
+        display: flex;
+        width: 350px !important;
+        background:#f3f3f8 !important;
+    }
+
+    .btn {
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    #account main {
+        margin-left: 350px;
+        border-radius: 40px 0 0 40px;
+        position: fixed;
+        padding: 60px 0;
+        z-index: 1;
+        height: 100vh !important;
+        width: calc(100% - 350px);
+        overflow: auto;
+        margin-top: 0;
+    }
+
+    #account .navMobile {
+        display: none;
+    }
+
+    #account main .sectionTitle h1 {
+        font-size:38px;
+    }
+    #account aside .aside-header .user-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/************************/
+/**** MAIN > WALLET > ADD CARD *****/
+/************************/
+
+.addCard{
+    margin-top: 20px;
+}
+.addCard .grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.addCard .grid form input{
+    width: 100%;
+    padding:0px 20px;
+    font-size:14px;
+    border:1px solid rgba(0, 0, 0, 10%);
+    border-left:0;
+    border-radius: 0 8px 8px 0;
+    height:60px;
+}
+.addCard .grid form button{
+    height:60px;
+    width: 100%;
+    margin-top: 1rem;
+    float:right;
+}
+.addCard .grid form input:focus,
+.addCard .grid form input:active{
+    outline:0;
+}
+.addCard .grid form label{
+    color: rgb(0 0 0 / 40%);
+    font-size: 14px;
+}
+
+.addCard .grid form .inputGroup{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top:5px;
+}
+.addCard .grid form .inputGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+}
+.addCard .grid form .inputGroup .input-group-prepend{
+    border:1px solid rgba(0, 0, 0, 10%);
+    border-right:0;
+    height:60px;
+    padding:20px;
+    border-radius: 8px 0 0 8px;
+}
+.addCard .grid .card{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.addCard .grid .card-wrapper{
+    transform: scale(1);
+    display: none;
+}
+.alert{
+    width: 100%;
+    background:#e0dfdf;
+    padding:20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+}
+.alert h2{
+    color:#222;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size:20px;
+}
+.alert p{
+    margin-bottom: 0;
+    color:#222;
+    font-size:16px;
+}
+
+/************************/
+/**** MAIN > SETTINGS *****/
+/************************/
+
+#settings .grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:40px;
+}
+#settings .grid .infos{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+#settings .grid .infos .inputGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+}
+#settings .grid .infos label{
+    display: block;
+    color: rgb(0 0 0 / 40%);
+    font-size: 14px;
+}
+#settings .grid .infos input{
+    width: 100%;
+    height: 50px;
+    padding:10px;
+    border:1px solid rgba(0,0,0, 10%);
+    border-radius:8px;
+    font-size:14px;
+    margin-top: 5px;
+}
+
+#settings .grid .infos input:focus,
+#settings .grid .infos input:active{
+    outline:0;
+}
+
+#settings .grid .infos button{
+    height:50px;
+    width: 100%;
+    float:right;
+    margin-top: 10px;
+}
+
+#settings .grid .image{
+    width: 300px;
+    height: 300px;
+    margin:0 auto;
+    position: relative;
+    border-radius: 50%;
+}
+
+#settings .grid .image .changeAvatar{
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0, 50%);
+    position: absolute;
+    border-radius: 50%;
+    line-height: 300px;
+    font-size:18px;
+    text-align: center;
+    color:#fff;
+    cursor:pointer;
+    opacity: 0;
+}
+#settings .grid .image .changeAvatar:hover{
+    opacity: 1;
+    transition: opacity .12s ease;
+}
+
+#settings .grid .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media(min-width: 700px) {
+    .wallet .grid {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 980px){
+    .wallet .grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .wallet .grid .item .card{
+        width: 100%;
+    }
+}
+
+@media(min-width:1100px){
+    .filter-mobile .filter .filterBtn{
+        width: 140px;
+        margin-left: auto;
+        padding:0;
+    }
+    .wallet .grid {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+    .wallet .grid .item .card{
+        width: 100%;
+    }
+
+    #settings .grid .image{
+        width: 300px;
+        height: 300px;
+    }
+    
+    #settings .grid .image .changeAvatar{
+        line-height: 300px;
+    }
+
+    
+}
+
+@media(min-width: 1280px){
+    .wallet .grid{
+        width: 80%;
+    }  
+    .addCard .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .addCard .grid .card-wrapper{
+        display: block;
+    }
+    .addCard .grid form button{
+        width: calc(50% - 10px);
+    }
+    #settings .grid{
+        grid-template-columns: 1fr 1.3fr;
+    }
+    #settings .grid .image{
+        width: 400px;
+        height: 400px;
+    }
+    
+    #settings .grid .image .changeAvatar{
+        line-height: 400px;
+    }
+    #settings .grid .infos button{
+        width: calc(50% - 10px);
+    }
+    .alert h2{
+        color:#222;
+        font-weight: bold;
+        margin-bottom: 0px;
+        font-size:20px;
+    }
+}
+
+@media(min-width: 1300px) {
+    .orders .order-body {
+        gap: 0;
+    }
+    #account main section{
+        padding-top:0;
+    }
+    .main-divider {
+        border-bottom: 1px solid rgba(0, 0, 0, 10%);
+        margin: 20px 0;
+    }
+
+    .filter-desktop{
+        display: block !important;
+    }
+    .filter-mobile {
+        display: none;
+    }
+
+    .orders .order-item h3 {
+        font-size: 18px;
+    }
+
+    .orders .order-item {
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+        padding: 20px !important;
+        align-items: center;
+    }
+    
+
+    .orders .order-item .order-quantity {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0px;
+        margin-top: 0px;
+    }
+
+    .badge-mobile {
+        display: none;
+    }
+
+    .badge-desktop {
+        display: block;
+    }
+
+    .orders .order-item .order-info div:first-child {
+        gap: 20px;
+    }
+
+    .orders .order-item .order-info img {
+        width: 80px;
+        display: block;
+    }
+
+    .wallet .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+     .filter .inputGrid {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .filter {
+        width: 100%;
+    }
+}
+@media(min-width: 1600px){
+    .addCard .grid .card-wrapper{
+        transform: scale(1.2);
+    }
+}
+
+
+@media(max-width: 480px){
+    #settings .grid .image{
+        width: 250px;
+        height: 250px;
+    }
+    
+    #settings .grid .image .changeAvatar{
+        line-height: 250px;
+    }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <title>Meus cartões | Baratão Combustíveis</title>
+    <link rel="stylesheet" href="./css/internalHeader.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/account.css" />
+    <link rel="shortcut icon" href="./assets/logo_mobile.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+    <button id="toggleNav">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="account">
+        <div id="asideMask"></div>
+        <aside id="asideNav">
+            <div class="aside-header">
+                <div class="user-info">
+                    <img src="./assets/avatar.jpg" alt="">
+                    <div>
+                        <h3>Jhonata</h3>
+                        <span>jhonbonadio@gmail.com</span>
+                    </div>
+                </div>
+                <a href="./settings.html" class="settings"><i class="fas fa-gear"></i></a>
+            </div>
+            <div class="aside-body">
+                <h4>Menu</h4>
+                <div class="flex">
+                    <a class="aside-item blue" href="./orders.html">
+                        <div class="icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h3>Meus pedidos</h3>
+                    </a>
+                    <a class="aside-item yellow" href="./payments.html">
+                        <div class="icon">
+                            <i class="fas fa-dollar"></i>
+                        </div>
+                        <h3>Pagamentos</h3>
+                    </a>
+                    <a class="aside-item purple active" href="./wallet.html">
+                        <div class="icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Cartões</h3>
+                    </a>
+                </div>
+                <h4>Outros</h4>
+                <div class="flex">
+                    <a class="aside-item green" target="_blank" href="#">
+                        <div class="icon">
+                            <i class="fas fa-question"></i>
+                        </div>
+                        <h3>Ajuda</h3>
+                    </a>
+                    <a class="aside-item red" target="_blank" href="./passo-1.html">
+                        <div class="icon">
+                            <i class="fas fa-gas-pump"></i>
+                        </div>
+                        <h3>Comprar combustível</h3>
+                    </a>
+                    <a class="aside-item cyan" target="_blank" href="./postos.html">
+                        <div class="icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>Postos credênciados</h3>
+                    </a>
+                    <a class="aside-item" href="./index.html">
+                        <div class="icon">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </div>
+                        <h3>Sair</h3>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <div class="container">
+                <div class="sectionTitle">
+                    <div>
+                        <div class="icon purple">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h1>Meus cartões</h1>
+                    </div>
+                    <a href="./addcard.html" class="btn blue">Adicionar cartão</a>
+                </div>
+                <div class="main-divider"></div>
+                <section class="wallet">
+                    <div class="alert">
+                        <h2>Salve o seu cartão para a próxima compra</h2>
+                        <p>Adicione um cartão de crédito em sua carteira digital para pagar suas compras com um clique.
+                        </p>
+                    </div>
+                    <div class="grid">
+                        <div class="item">
+                            <div class="card">
+                                <a href="#" class="deleteCard">Excluir cartão</a>
+                                <div class="chip">
+                                    <img src="./assets/card-chip.png" alt="">
+                                </div>
+                                <h3>•••• •••• •••• 8496</h3>
+                                <div>
+                                    <h4>JHONATA H L BONADIO</h4>
+                                    <div class="card-info">
+                                        <small>Validade</small>
+                                        <h4>10/28</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <a href="#" class="deleteCard">Excluir cartão</a>
+                                <div class="chip">
+                                    <img src="./assets/card-chip.png" alt="">
+                                </div>
+                                <h3>•••• •••• •••• 1930</h3>
+                                <div>
+                                    <h4>SANDRA R M LIMA</h4>
+                                    <div class="card-info">
+                                        <small>Validade</small>
+                                        <h4>02/28</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <a href="#" class="deleteCard">Excluir cartão</a>
+                                <div class="chip">
+                                    <img src="./assets/card-chip.png" alt="">
+                                </div>
+                                <h3>•••• •••• •••• 0004</h3>
+                                <div>
+                                    <h4>JHONATA H L BONADIO</h4>
+                                    <div class="card-info">
+                                        <small>Validade</small>
+                                        <h4>04/22</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+    </div>
+
+    <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <script src="https://kit.fontawesome.com/4c9c458037.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./scripts/scripts.js"></script>
+
+</body>
+
+</html>

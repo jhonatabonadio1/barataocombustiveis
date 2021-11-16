@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <title>Meus pedidos | Baratão Combustíveis</title>
+    <link rel="stylesheet" href="./css/internalHeader.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/account.css" />
+    <link rel="shortcut icon" href="./assets/logo_mobile.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <button id="toggleNav">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="account">
+        <div id="asideMask"></div>
+        <aside id="asideNav">
+            <div class="aside-header">
+                <div class="user-info">
+                    <img src="./assets/avatar.jpg" alt="">
+                    <div>
+                        <h3>Jhonata</h3>
+                        <span>jhonbonadio@gmail.com</span>
+                    </div>
+                </div>
+                <a href="./settings.html" class="settings"><i class="fas fa-gear"></i></a>
+            </div>
+            <div class="aside-body">
+                <h4>Menu</h4>
+                <div class="flex">
+                    <a class="aside-item blue active" href="./orders.html">
+                        <div class="icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h3>Meus pedidos</h3>
+                    </a>
+                    <a class="aside-item yellow" href="./payments.html">
+                        <div class="icon">
+                            <i class="fas fa-dollar"></i>
+                        </div>
+                        <h3>Pagamentos</h3>
+                    </a>
+                    <a class="aside-item purple" href="./wallet.html">
+                        <div class="icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Cartões</h3>
+                    </a>
+                </div>
+                <h4>Outros</h4>
+                <div class="flex">
+                    <a class="aside-item green" target="_blank" href="#">
+                        <div class="icon">
+                            <i class="fas fa-question"></i>
+                        </div>
+                        <h3>Ajuda</h3>
+                    </a>
+                    <a class="aside-item red" target="_blank" href="./passo-1.html">
+                        <div class="icon">
+                            <i class="fas fa-gas-pump"></i>
+                        </div>
+                        <h3>Comprar combustível</h3>
+                    </a>
+                    <a class="aside-item cyan" target="_blank" href="./postos.html">
+                        <div class="icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>Postos credênciados</h3>
+                    </a>
+                    <a class="aside-item" href="./index.html">
+                        <div class="icon">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </div>
+                        <h3>Sair</h3>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+
+        <main>
+            <header>
+                <div class="container">
+                    <div class="flex">
+                        <div class="left">
+                            <div class="logo">
+                                <img src="./assets/icone.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="container">
+                <div class="sectionTitle">
+                    <div>
+                        <div class="icon blue">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h1>Meus pedidos</h1>
+                    </div>
+                </div>
+                <div class="main-divider"></div>
+                <div class="filter-mobile">
+                    <div class="filterHeader" id="toggleFilters">
+                        <h3>Filtrar</h3>
+                        <button type="button"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <form action="./orders.html" class="filter">
+                        <div class="filter-content" id="filters" style="display: none;padding:10px 0;">
+                            <div class="inputGrid">
+                                <div>
+                                    <label>De:</label>
+                                    <input type="date" placeholder="dd/mm/aaaa" name="" id="">
+                                </div>
+                                <div>
+                                    <label>Até:</label>
+                                    <input type="date" name="" id="">
+                                </div>
+                            </div>
+                            <div>
+                                <label>Status:</label>
+                                <select name="" id="">
+                                    <option value="">Todos</option>
+                                    <option value="">Cancelado</option>
+                                    <option value="">Aprovado</option>
+                                    <option value="">Recusado</option>
+                                    <option value="">Pendente</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button class="filterBtn">Aplicar filtro</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="filter-desktop">
+                    <form action="./orders.html" class="filter">
+
+                        <div class="inputGrid">
+                            <div>
+                                <label>De:</label>
+                                <input type="date" name="" id="">
+                            </div>
+
+                        </div>
+                        <div class="inputGrid">
+                            <div>
+                                <label>Até:</label>
+                                <input type="date" name="" id="">
+                            </div>
+                        </div>
+                        <div>
+                            <label>Status:</label>
+                            <select name="" id="">
+                                <option value="">Todos</option>
+                                <option value="">Cancelado</option>
+                                <option value="">Aprovado</option>
+                                <option value="">Recusado</option>
+                                <option value="">Pendente</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="filterBtn">Aplicar filtro</button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="main-divider"></div>
+                <section class="orders">
+                    <div class="order-body">
+                        <a href="#" class="order-item" onClick="pendente()">
+                            <div class="order-info">
+                                <div class="order-id">
+                                    <img src="./assets/gasolina-comum.png" alt="">
+                                    <div>
+                                        <h3>Gasolina Comum</h3>
+                                        <small>10/11/2021 às 17:20</small>
+                                    </div>
+                                </div>
+                                <div class="badge-mobile">
+                                    <div class="badge yellow">Pendente</div>
+                                </div>
+                            </div>
+                            <div class="order-quantity">
+                                <div>
+                                    <small>Pedido</small>
+                                    <h3>#76582</h3>
+                                </div>
+                                <div>
+                                    <small>Litros</small>
+                                    <h3>20 Lts</h3>
+                                </div>
+                                <div>
+                                    <small>Valor</small>
+                                    <h3>R$75,00</h3>
+                                </div>
+                                <div class="badge-desktop">
+                                    <div class="badge yellow">Pendente</div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="order-item" onClick="indisponivel()">
+                            <div class="order-info">
+                                <div class="order-id">
+                                    <img src="./assets/gasolina-aditivada.png" alt="">
+                                    <div>
+                                        <h3>Gasolina Aditivada</h3>
+                                        <small>10/11/2021 às 17:20</small>
+                                    </div>
+                                </div>
+                                <div class="badge-mobile">
+                                    <div class="badge red">Indisponível</div>
+                                </div>
+                            </div>
+                            <div class="order-quantity">
+                                <div>
+                                    <small>Pedido</small>
+                                    <h3>#76582</h3>
+                                </div>
+                                <div>
+                                    <small>Litros</small>
+                                    <h3>20 Lts</h3>
+                                </div>
+                                <div>
+                                    <small>Valor</small>
+                                    <h3>R$75,00</h3>
+                                </div>
+                                <div class="badge-desktop">
+                                    <div class="badge red">Indisponível</div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="order-item" onClick="cancelado()">
+                            <div class="order-info">
+                                <div class="order-id">
+                                    <img src="./assets/diesel-comum.png" alt="">
+                                    <div>
+                                        <h3>Diesel comum</h3>
+                                        <small>10/11/2021 às 17:20</small>
+                                    </div>
+                                </div>
+                                <div class="badge-mobile">
+                                    <div class="badge">Cancelado</div>
+                                </div>
+                            </div>
+                            <div class="order-quantity">
+                                <div>
+                                    <small>Pedido</small>
+                                    <h3>#76582</h3>
+                                </div>
+                                <div>
+                                    <small>Litros</small>
+                                    <h3>20 Lts</h3>
+                                </div>
+                                <div>
+                                    <small>Valor</small>
+                                    <h3>R$75,00</h3>
+                                </div>
+                                <div class="badge-desktop">
+                                    <div class="badge">Cancelado</div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="./qrcode.html" target="_blank" class="order-item">
+                            <div class="order-info">
+                                <div class="order-id">
+                                    <img src="./assets/diesel-aditivado.png" alt="">
+                                    <div>
+                                        <h3>Diesel S10</h3>
+                                        <small>10/11/2021 às 17:20</small>
+                                    </div>
+                                </div>
+                                <div class="badge-mobile">
+                                    <div class="badge green">Disponível</div>
+                                </div>
+                            </div>
+                            <div class="order-quantity">
+                                <div>
+                                    <small>Pedido</small>
+                                    <h3>#76582</h3>
+                                </div>
+                                <div>
+                                    <small>Litros</small>
+                                    <h3>20 Lts</h3>
+                                </div>
+                                <div>
+                                    <small>Valor</small>
+                                    <h3>R$75,00</h3>
+                                </div>
+                                <div class="badge-desktop">
+                                    <div class="badge green">Disponível</div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <script src="https://kit.fontawesome.com/4c9c458037.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./scripts/scripts.js"></script>
+
+
+    <script>
+        function cancelado() {
+            Swal.fire({
+                text: "Este cupom foi cancelado.",
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: true,
+            })
+        }
+        function indisponivel() {
+            Swal.fire({
+                text: "Este cupom está indisponível.",
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: true,
+            })
+        }
+        function pendente() {
+            Swal.fire({
+                text: "Este cupom está com o pagamento pendente.",
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: true,
+            })
+        }
+    </script>
+
+</body>
+
+</html>

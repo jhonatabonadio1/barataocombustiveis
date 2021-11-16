@@ -78,6 +78,8 @@ $('#hiddenCheckout').click(function () {
   $('html, body').removeClass("noScroll")
 })
 
+/* REMOVIDO */
+/** 
 function emptyStation(){
   Swal.fire({
     title: 'Atenção',
@@ -95,6 +97,24 @@ function emptyStation(){
   })
 }
 
+
+$("[data-target=regionModal]").click(function() {
+  if($(this).parents("form").find("#regionInput").val()){
+    $("#regionModal").fadeIn() 
+  }
+})
+
+$("#regionModal #closeModal").click(function() {
+  $("#regionModal").fadeOut()
+})
+
+
+**/
+/* REMOVIDO */
+
+
+/** NOVO BLOCO **/
+
 $("#toggleFilters").click(function () {
   $("#filters").slideToggle()
   if ($("#toggleFilters").find("i").hasClass("fa-chevron-down")) {
@@ -105,4 +125,29 @@ $("#toggleFilters").click(function () {
       $("#toggleFilters").find("i").addClass("fa-chevron-down")
   }
 
+  
+
 })
+
+$("#toggleNav").click(function () {
+
+  $("#asideNav").toggleClass("active")
+  $("#asideNav.active").animate({ left: '-300px' }, 0);
+  $("#asideNav.active").animate({ left: '0px' }, 350);
+  $("#asideMask").toggleClass("active")
+  $("body").css("overflowY", "hidden")
+})
+$("#asideMask").click(function () {
+  $("#asideNav.active").animate({ left: '-300px' }, 350, function () {
+      $("#asideNav").removeClass("active")
+      $("#asideNav").css("left", "")
+      $("#asideMask").removeClass("active")
+  })
+})
+$(window).resize(function () {
+  if ($(window).width() > 980) {
+      $("#asideNav").removeClass("active")
+      $("#asideMask").removeClass("active")
+  }
+})
+/** NOVO BLOCO **/
