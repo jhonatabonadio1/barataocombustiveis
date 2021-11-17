@@ -132,13 +132,13 @@ $("#toggleFilters").click(function () {
 $("#toggleNav").click(function () {
 
   $("#asideNav").toggleClass("active")
-  $("#asideNav.active").animate({ left: '-300px' }, 0);
+  $("#asideNav.active").animate({ left: '-325px' }, 0);
   $("#asideNav.active").animate({ left: '0px' }, 350);
   $("#asideMask").toggleClass("active")
   $("body").css("overflowY", "hidden")
 })
 $("#asideMask").click(function () {
-  $("#asideNav.active").animate({ left: '-300px' }, 350, function () {
+  $("#asideNav.active").animate({ left: '-325px' }, 350, function () {
       $("#asideNav").removeClass("active")
       $("#asideNav").css("left", "")
       $("#asideMask").removeClass("active")

@@ -16,11 +16,12 @@ body {
 .btn {
     width: 100%;
     text-align: center;
-    height: 50px;
+    height: 40px;
     border: 1px solid #37375C;
-    line-height: 50px;
+    line-height: 40px;
     border-radius: 15px;
     color: #37375C;
+    display: block;
     transition: background .12s ease !important;
 }
 
@@ -146,14 +147,14 @@ body {
 #account aside.active{
     display: block;
     background:#fff;
-    width: 300px;
-    left:-300px ;
+    width: 325px;
+    left:-325px;
 }
 #account aside.active .aside-body .aside-item{
-    gap:10px;
+    gap: 15px;
 }
 #account aside.active .aside-body .aside-item h3{
-    font-size:16px;
+    font-size:18px;
 }
 #account aside.active .aside-body .aside-item .icon{
     font-size:16px;
@@ -408,11 +409,12 @@ header .container .flex .right .logo img{
 
 #account main {
     margin-left: 0;
-    padding: 40px 0;
+    padding: 30px 0;
     border-radius: 0;
     background: #fff;
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -1047,7 +1049,7 @@ header .container .flex .right .logo img{
         margin-left: 350px;
         border-radius: 40px 0 0 40px;
         position: fixed;
-        padding: 60px 0;
+        padding: 40px 0;
         z-index: 1;
         height: 100vh !important;
         width: calc(100% - 350px);

@@ -5,441 +5,370 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
-  <title>Etapa 1: Combustíveis | Baratão Combustíveis</title>
+  <title>Etapa 1: Comprar combustível | Baratão Combustíveis</title>
   <link rel="stylesheet" href="./css/internalHeader.css" />
   <link rel="stylesheet" href="./css/global.css" />
   <link rel="stylesheet" href="./css/steps.css" />
+
   <link rel="shortcut icon" href="./assets/logo_mobile.png" type="image/x-icon">
 
 </head>
 
 <body>
 
-  <header>
-    <nav class="internalNav">
-      <a href="/" class="logo">
-        <!-- ALTERADO--><img src="./assets/icone.svg" alt=""><!-- ALTERADO-->
-      </a>
-      <button class="toggle"><i class="fas fa-bars"></i></button>
-      <ul>
-        <button class="toggle toggleTimes"><i class="fas fa-times"></i></button>
-        <li><a href="/">Início</a></li>
-        <li><a class="disabled">Minha conta</a></li>
-        <li><a class="disabled">Carrinho de compras</a></li>
-        <li><a class="disabled">Ajuda</a></li>
-      </ul>
-      </div>
-    </nav>
-  </header>
-  <div class="steps">
-    <div class="flex">
+  <button id="toggleNav">
+    <i class="fas fa-bars"></i>
+  </button>
 
-      <div class="sideLeft">
-        <a href="#" class="logo">
-          <!-- ALTERADO-->
-          <img src="./assets/icone.svg" alt="">
-          <!-- ALTERADO-->
-        </a>
-        <div class="sidebar-link">
-          <div class="menu-link active">
-            <a href="/passo-1.html">
-              <div class="menu-link-icon">
-                <div class="wrap">
-                  <i class="fas fa-car" aria-hidden="true"></i>
-                </div>
-              </div>
-              <span>Combustíveis</span>
-            </a>
-          </div>
-          <div class="menu-link">
-            <div>
-              <div class="menu-link-icon">
-                <div class="wrap">
-                  <i class="fas fa-dollar-sign" aria-hidden="true"></i>
-                </div>
-              </div>
-              <span>Pagamento</span>
-            </div>
-          </div>
-          <div class="menu-link">
-            <div>
-              <div class="menu-link-icon">
-                <div class="wrap">
-                  <i class="fas fa-check" aria-hidden="true"></i>
-                </div>
-              </div>
-              <span>Finalização</span>
-            </div>
-          </div>
-        </div>
-        <div class="account">
-
-          <button class="btn btn-primary">Minha conta</button>
-          <button class="btn btn-primary-outline">Ajuda</button>
-        </div>
-      </div>
-
-      <div class="main">
-        <div class="alert">
+  <div id="store">
+    <div id="asideMask"></div>
+    <aside id="asideNav">
+      <div class="aside-header">
+        <div class="user-info">
+          <img src="./assets/avatar.png" alt="">
           <div>
-            <img src="./assets/warning-badge.png" width="80" alt="">
-          </div>
-          <div>
-            <h3>VERIFIQUE OS POSTOS CREDÊNCIADOS EM SUA REGIÃO</h3>
-            <span>Antes de realizar a compra dos combustíveis, verifique se existem postos credênciados em sua região.
-              Você pode usar os cupons em qualquer posto credênciado. <a href="#">Ver postos credênciados</a></span>
+            <h3>Olá, visitante!</h3>
+            <span><a href="./login.html">Faça o login</a></span>
           </div>
         </div>
+
+      </div>
+      <div class="aside-body">
+        <h4>Etapas</h4>
         <div class="flex">
-          <h1>Selecione os combustíveis</h1>
-          <p class="fuelCount">4 resultados encontrados</p>
-          <div class="card fuelCard" id="1">
-            <div class="flex">
-              <div class="col">
-                <div class="flex">
-                  <div>
-                    <img src="./assets/gasolina-comum.png" alt="" width="80" height="80">
-                  </div>
-                  <div>
-                    <h3 name="fuelName">Gasolina Comum</h3>
-                    <small name="fuelDesc">Shell V-Power</small>
-                  </div>
-                </div>
-              </div>
-              <div class="col-auto">
-                <div class="flex">
-                  <div class="addQuantity">
-                    <label>Quantos cupons?</label>
-                    <div class="form">
-                      <button class="form-control minusButton fas fa-minus" data-field="quantity"></button>
-                      <input type="number" value="1" id="qntField" name="quantity" class="form-control quantityField"
-                        disabled>
-                      <button class="form-control plusButton fas fa-plus" data-field="quantity"></button>
-                    </div>
-                  </div>
-                  <div class="price">
-                    <small>DE <b>R$6,84</b> POR:</small>
-                    <h4 class="sale">R$6,14 à vista</h4>
-                    <div class="badge promo">Nota fiscal</div>
-                  </div>
-                </div>
-              </div>
+          <a class="aside-item red active" href="./passo-1.html">
+            <div class="icon">
+              <i class="fas fa-gas-pump"></i>
             </div>
-            <div class="cardAccordion">
-              <input type="hidden" value="6.025" id="fuelPrice" />
-              <div class="flex">
-                <div class="inputGrid">
-                  <div>
-                    <label for="placa">Litros</label>
-                    <select class="form-control" id="lts">
-                      <option value="0">Selecione</option>
-                      <option value="5">5 Lts</option>
-                      <option value="10">10 Lts</option>
-                      <option value="15">15 Lts</option>
-                      <option value="20">20 Lts</option>
-                    </select>
-                    <div class="inputError"></div>
-                  </div>
-                  <div>
-                    <label for="placa">Valor total</label>
-                    <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
-                    <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
-                  </div>
-                </div>
-                <button class="btn" id="addToCart">Adicionar ao carrinho</button>
-              </div>
+            <h3>Comprar combustível</h3>
+          </a>
+          <a class="aside-item yellow disabled">
+            <div class="icon">
+              <i class="fas fa-dollar"></i>
             </div>
-          </div>
+            <h3>Fazer Pagamento</h3>
+          </a>
+          <a class="aside-item blue disabled">
+            <div class="icon">
+              <i class="fas fa-box"></i>
+            </div>
+            <h3>Meus pedidos</h3>
+          </a>
 
-          <div class="card fuelCard" id="1">
-            <div class="flex">
-              <div class="col">
-                <div class="flex">
-                  <div>
-                    <img src="./assets/diesel-aditivado.png" alt="" width="80" height="80">
-                  </div>
-                  <div>
-                    <h3 name="fuelName">Diesel S10</h3>
-                    <small name="fuelDesc">Diesel Aditivado</small>
-                  </div>
-                </div>
-              </div>
-              <div class="col-auto">
-                <div class="flex">
-                  <div class="addQuantity">
-                    <label>Quantos cupons?</label>
-                    <div class="form">
-                      <button class="form-control minusButton fas fa-minus" data-field="quantity"></button>
-                      <input type="number" value="1" id="qntField" name="quantity" class="form-control quantityField"
-                        disabled>
-                      <button class="form-control plusButton fas fa-plus" data-field="quantity"></button>
-                    </div>
-                  </div>
-                  <div class="price">
-                    <small>DE <b>R$5,75</b> POR:</small>
-                    <h4>R$4,89 à vista</h4>
-                    <div class="badge promo">Nota fiscal</div>
-                  </div>
-                </div>
-              </div>
+        </div>
+        <h4>Outros</h4>
+        <div class="flex">
+          <a class="aside-item cyan" href="./postos.html">
+            <div class="icon">
+              <i class="fas fa-store"></i>
             </div>
-            <div class="cardAccordion">
-              <input type="hidden" value="5.29" id="fuelPrice" />
-              <div class="flex">
-                <div class="inputGrid">
-                  <div>
-                    <label for="placa">Litros</label>
-                    <select class="form-control" id="lts">
-                      <option value="0">Selecione</option>
-                      <option value="5">5 Lts</option>
-                      <option value="10">10 Lts</option>
-                      <option value="15">15 Lts</option>
-                      <option value="20">20 Lts</option>
-                    </select>
-                    <div class="inputError"></div>
-                  </div>
-                  <div>
-                    <label for="placa">Valor total</label>
-                    <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
-                    <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
-                  </div>
-                </div>
-                <button class="btn" id="addToCart">Adicionar ao carrinho</button>
-              </div>
+            <h3>Postos credênciados</h3>
+          </a>
+          <a class="aside-item green" href="./">
+            <div class="icon">
+              <i class="fas fa-question"></i>
             </div>
-          </div>
+            <h3>Ajuda</h3>
+          </a>
 
-          <div class="card fuelCard" id="1">
-            <div class="flex">
-              <div class="col">
-                <div class="flex">
-                  <div>
-                    <img src="./assets/gasolina-aditivada.png" alt="" width="80" height="80">
-                  </div>
-                  <div>
-                    <h3 name="fuelName">Gasolina Aditivada</h3>
-                    <small name="fuelDesc">Gasolina Aditivada</small>
-                  </div>
-                </div>
-              </div>
-              <div class="col-auto">
-                <div class="flex">
-                  <div class="addQuantity">
-                    <label>Quantos cupons?</label>
-                    <div class="form">
-                      <button class="form-control minusButton fas fa-minus" data-field="quantity"></button>
-                      <input type="number" value="1" id="qntField" name="quantity" class="form-control quantityField"
-                        disabled>
-                      <button class="form-control plusButton fas fa-plus" data-field="quantity"></button>
-                    </div>
-                  </div>
-                  <div class="price">
-                    <small>DE <b>R$7,02</b> POR:</small>
-                    <h4>R$6,59 à vista</h4>
-                    <div class="badge promo">Nota fiscal</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cardAccordion">
-              <input type="hidden" value="6.59" id="fuelPrice" />
-              <div class="flex">
-                <div class="inputGrid">
-                  <div>
-                    <label for="placa">Litros</label>
-                    <select class="form-control" id="lts">
-                      <option value="0">Selecione</option>
-                      <option value="5">5 Lts</option>
-                      <option value="10">10 Lts</option>
-                      <option value="15">15 Lts</option>
-                      <option value="20">20 Lts</option>
-                    </select>
-                    <div class="inputError"></div>
-                  </div>
-                  <div>
-                    <label for="placa">Valor total</label>
-                    <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
-                    <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
-                  </div>
-                </div>
-                <button class="btn" id="addToCart">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="card fuelCard" id="2">
-            <div class="flex">
-              <div class="col">
-                <div class="flex">
-                  <div>
-                    <img src="./assets/diesel-comum.png" alt="" width="80" height="80">
-                  </div>
-                  <div>
-                    <h3 name="fuelName">Diesel Comum</h3>
-                    <small name="fuelDesc">Diesel Comum</small>
-                  </div>
-                </div>
-              </div>
-              <div class="col-auto">
-                <div class="flex">
-                  <div class="addQuantity">
-                    <label>Quantos cupons?</label>
-                    <div class="form">
-                      <button class="form-control minusButton fas fa-minus" data-field="quantity"></button>
-                      <input type="number" value="1" id="qntField" name="quantity" class="form-control quantityField"
-                        disabled>
-                      <button class="form-control plusButton fas fa-plus" data-field="quantity"></button>
-                    </div>
-                  </div>
-                  <div class="price">
-                    <small>DE <b>R$5,74</b> POR:</small>
-                    <h4>R$5,29 à vista</h4>
-                    <div class="badge promo">Nota fiscal</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cardAccordion">
-              <input type="hidden" value="5.29" id="fuelPrice" />
-              <div class="flex">
-                <div class="inputGrid">
-                  <div>
-                    <label for="placa">Litros</label>
-                    <select class="form-control" id="lts">
-                      <option value="0">Selecione</option>
-                      <option value="5">5 Lts</option>
-                      <option value="10">10 Lts</option>
-                      <option value="15">15 Lts</option>
-                      <option value="20">20 Lts</option>
-                    </select>
-                    <div class="inputError"></div>
-                  </div>
-                  <div>
-                    <label for="placa">Valor total</label>
-                    <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
-                    <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
-                  </div>
-                </div>
-                <button class="btn" id="addToCart">Adicionar ao carrinho</button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+    </aside>
 
-      <div class="sideRight">
 
-        <div name="empty" class="emptyCart">
-          <!-- active -->
-          <h4 class="empty active">Seu carrinho está vazio</h4>
-        </div>
-        <div class="sidebarBody sideHidden" name="sideBody">
-          <!-- sideHidden -->
-          <div class="sideHeader">
-            <form action="" class="cupom">
-              <h4>Cupom de desconto</h4>
-              <div class="inputGroup">
-                <input type="text" class="form-control" placeholder="Código do cupom">
-                <button type="button" class="btn btn-primary" onClick="errorCupom()">Aplicar</button>
-              </div>
-            </form>
-            <h4>Carrinho</h4>
-          </div>
-          <div class="cart" name="cart">
-
+    <main>
+      <div class="container">
+        <div class="sectionTitle">
+          <div>
+            <div class="icon red">
+              <i class="fas fa-gas-pump"></i>
+            </div>
+            <h1>Comprar combustível</h1>
           </div>
         </div>
-      </div>
-      <div class="fuelFooter flex">
-        <div>
-          <small>VALOR TOTAL</small>
-          <input type="hidden" value="0.00" name="result" />
-          <h3 class="primary" name="resultText">R$ 0,00</h3>
+        <div class="main-divider"></div>
+
+        <div class="totalPrice">
+          <div class="priceInfos">
+            <div>
+              <small>TOTAL:</small>
+              <h3>R$157,90</h3>
+            </div>
+            <div>
+              <small>CUPONS:</small>
+              <h3>12</h3>
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="btn blue" onClick="window.location.href = './passo-2.html'">Pagar
+              agora</button>
+          </div>
         </div>
-        <div>
-          <button class="btn btn-primary" type="submit" onClick="window.location.href = './passo-2.html'" name="pay"
-            disabled>Pagar agora</button>
-        </div>
-      </div>
 
-      <div class="footer">
+        <div class="main-divider"></div>
 
-        <div class="payButtonFooter">
-          <button class="btn btn-primary" name="pay" onClick="window.location.href = './passo-2.html'" disabled>Pagar
-            agora</button>
-        </div>
-
-
-        <div class="sideBottom">
-
+        <section class="products">
+          <div class="alert">
+            <h2>Verifique os postos credênciados em sua região</h2>
+            <p>Adicione um cartão de crédito em sua carteira digital para pagar suas compras com um clique.
+            </p>
+          </div>
           <div class="flex">
-            <div>
-              <small>VALOR TOTAL</small>
-              <input type="hidden" value="0.00" name="result" />
-              <h3 name="resultText">R$ 0,00</h3>
-            </div>
-            <div>
-              <i class="fas fa-angle-up pointer" id="checkoutButton"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="checkoutModal" id="checkout" style="display: none;">
-
-          <div class="sidebarHeader">
-            <div>
-              <small>VALOR TOTAL</small>
-              <input type="hidden" value="0.00" name="result" />
-              <h3 class="primary" name="resultText">R$ 0,00</h3>
-            </div>
-            <div class="flex">
-              <button class="btn btn-primary" name="pay" onClick="window.location.href = './passo-2.html'"
-                disabled>Pagar</button>
-              <i class="fas fa-angle-down pointer" id="hiddenCheckout"></i>
-            </div>
-          </div>
-          <div name="empty active" class="emptyCartFooter">
-            <!-- active -->
-            <h4 class="empty">Seu carrinho está vazio</h4>
-          </div>
-          <div class="sidebarBody sideHidden" name="sideBody">
-            <!-- sideHidden -->
-            <form action="" class="cupom">
-              <h4>Cupom de desconto</h4>
-              <div class="inputGroup">
-                <input type="text" class="form-control" placeholder="Código do cupom">
-                <button type="button" class="btn btn-primary" onClick="errorCupom()">Aplicar</button>
+            <div class="card fuelCard" id="1">
+              <div class="flex">
+                <div class="col">
+                  <div class="flex">
+                    <div>
+                      <img src="./assets/gasolina-comum.png" alt="" width="80" height="80">
+                    </div>
+                    <div>
+                      <h3 name="fuelName">Gasolina Comum</h3>
+                      <small name="fuelDesc">Shell V-Power</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="flex">
+                    <div class="addQuantity">
+                      <label>Quantos cupons?</label>
+                      <div class="form">
+                        <button class="form-control minusButton fas fa-minus" data-field="quantity"></button>
+                        <input type="number" value="0" id="qntField" name="quantity" class="form-control quantityField"
+                          disabled>
+                        <button class="form-control plusButton fas fa-plus" data-field="quantity"></button>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <small>DE <b>R$6,84</b> POR:</small>
+                      <h4 class="sale">R$6,14 à vista</h4>
+                      <a href="./notafiscal.pdf" target="_blank">
+                        <div class="badge promo">Nota fiscal</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </form>
-            <h4>Carrinho</h4>
-            <div class="cart" name="cart">
+              <div class="cardAccordion">
+                <input type="hidden" value="6.025" id="fuelPrice" />
+                <div class="flex">
+                  <div class="inputGrid">
+                    <div>
+                      <label for="placa">Litros</label>
+                      <select class="form-control" id="lts">
+                        <option value="0">Selecione</option>
+                        <option value="5">5 Lts</option>
+                        <option value="10">10 Lts</option>
+                        <option value="15">15 Lts</option>
+                        <option value="20">20 Lts</option>
+                      </select>
+                      <div class="inputError"></div>
+                    </div>
+                    <div>
+                      <label for="placa">Valor total</label>
+                      <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
+                      <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
+                    </div>
+                  </div>
 
+                </div>
+              </div>
+            </div>
+
+            <div class="card fuelCard" id="1">
+              <div class="flex">
+                <div class="col">
+                  <div class="flex">
+                    <div>
+                      <img src="./assets/diesel-aditivado.png" alt="" width="80" height="80">
+                    </div>
+                    <div>
+                      <h3 name="fuelName">Diesel S10</h3>
+                      <small name="fuelDesc">Diesel Aditivado</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="flex">
+                    <div class="addQuantity">
+                      <label>Quantos cupons?</label>
+                      <div class="form">
+                        <button class="form-control minusButton fas fa-minus" data-field="quantity"></button>
+                        <input type="number" value="0" id="qntField" name="quantity" class="form-control quantityField"
+                          disabled>
+                        <button class="form-control plusButton fas fa-plus" data-field="quantity"></button>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <small>DE <b>R$5,75</b> POR:</small>
+                      <h4>R$4,89 à vista</h4>
+                      <a href="./notafiscal.pdf" target="_blank">
+                        <div class="badge promo">Nota fiscal</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cardAccordion">
+                <input type="hidden" value="5.29" id="fuelPrice" />
+                <div class="flex">
+                  <div class="inputGrid">
+                    <div>
+                      <label for="placa">Litros</label>
+                      <select class="form-control" id="lts">
+                        <option value="0">Selecione</option>
+                        <option value="5">5 Lts</option>
+                        <option value="10">10 Lts</option>
+                        <option value="15">15 Lts</option>
+                        <option value="20">20 Lts</option>
+                      </select>
+                      <div class="inputError"></div>
+                    </div>
+                    <div>
+                      <label for="placa">Valor total</label>
+                      <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
+                      <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card fuelCard" id="1">
+              <div class="flex">
+                <div class="col">
+                  <div class="flex">
+                    <div>
+                      <img src="./assets/gasolina-aditivada.png" alt="" width="80" height="80">
+                    </div>
+                    <div>
+                      <h3 name="fuelName">Gasolina Aditivada</h3>
+                      <small name="fuelDesc">Gasolina Aditivada</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="flex">
+                    <div class="addQuantity">
+                      <label>Quantos cupons?</label>
+                      <div class="form">
+                        <button class="form-control minusButton fas fa-minus" data-field="quantity"></button>
+                        <input type="number" value="0" id="qntField" name="quantity" class="form-control quantityField"
+                          disabled>
+                        <button class="form-control plusButton fas fa-plus" data-field="quantity"></button>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <small>DE <b>R$7,02</b> POR:</small>
+                      <h4>R$6,59 à vista</h4>
+                      <a href="./notafiscal.pdf" target="_blank">
+                        <div class="badge promo">Nota fiscal</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cardAccordion">
+                <input type="hidden" value="6.59" id="fuelPrice" />
+                <div class="flex">
+                  <div class="inputGrid">
+                    <div>
+                      <label for="placa">Litros</label>
+                      <select class="form-control" id="lts">
+                        <option value="0">Selecione</option>
+                        <option value="5">5 Lts</option>
+                        <option value="10">10 Lts</option>
+                        <option value="15">15 Lts</option>
+                        <option value="20">20 Lts</option>
+                      </select>
+                      <div class="inputError"></div>
+                    </div>
+                    <div>
+                      <label for="placa">Valor total</label>
+                      <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
+                      <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card fuelCard" id="2">
+              <div class="flex">
+                <div class="col">
+                  <div class="flex">
+                    <div>
+                      <img src="./assets/diesel-comum.png" alt="" width="80" height="80">
+                    </div>
+                    <div>
+                      <h3 name="fuelName">Diesel Comum</h3>
+                      <small name="fuelDesc">Diesel Comum</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="flex">
+                    <div class="addQuantity">
+                      <label>Quantos cupons?</label>
+                      <div class="form">
+                        <button class="form-control minusButton fas fa-minus" data-field="quantity"></button>
+                        <input type="number" value="0" id="qntField" name="quantity" class="form-control quantityField"
+                          disabled>
+                        <button class="form-control plusButton fas fa-plus" data-field="quantity"></button>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <small>DE <b>R$5,74</b> POR:</small>
+                      <h4>R$5,29 à vista</h4>
+                      <a href="./notafiscal.pdf" target="_blank">
+                        <div class="badge promo">Nota fiscal</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cardAccordion">
+                <input type="hidden" value="5.29" id="fuelPrice" />
+                <div class="flex">
+                  <div class="inputGrid">
+                    <div>
+                      <label for="placa">Litros</label>
+                      <select class="form-control" id="lts">
+                        <option value="0">Selecione</option>
+                        <option value="5">5 Lts</option>
+                        <option value="10">10 Lts</option>
+                        <option value="15">15 Lts</option>
+                        <option value="20">20 Lts</option>
+                      </select>
+                      <div class="inputError"></div>
+                    </div>
+                    <div>
+                      <label for="placa">Valor total</label>
+                      <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
+                      <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="modalMask"></div>
 
+        </section>
       </div>
+    </main>
+  </div>
 
-    </div>
 
-    <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://kit.fontawesome.com/4c9c458037.js" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./scripts/scripts.js"></script>
-    <script src="./scripts/mathFuel.js"></script>
-    <script src="./scripts/cart.js"></script>
 
-    <script>
-      function errorCupom() {
-        Swal.fire({
-          icon: 'error',
-          title: "Cupom inválido",
-          text: 'Verifique o código do cupom e tente novamente.',
-        })
-      }
-    </script>
+  <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://code.jquery.com/jquery-3.6.0.min.js">
+  </script>
+  <script src="https://kit.fontawesome.com/4c9c458037.js" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./scripts/mathFuel.js"></script>
+  <script src="./scripts/scripts.js"></script>
 
 </body>
 

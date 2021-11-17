@@ -61,10 +61,10 @@ function decrementValue(e) {
   var parent = $(e.target).closest('div');
   var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
 
-  if (!isNaN(currentVal) && currentVal > 1) {
+  if (!isNaN(currentVal) && currentVal > 0) {
     parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
   } else {
-    parent.find('input[name=' + fieldName + ']').val(1);
+    parent.find('input[name=' + fieldName + ']').val(0);
   }
 }
 
