@@ -390,7 +390,7 @@
         // The map, centred at Ulurue
         const map = new google.maps.Map(
             document.getElementById("map"), {
-            zoom: 14,
+            zoom: 4,
             center: df,
             gestureHandling: "greedy",
             styles: mapStyle
@@ -426,11 +426,17 @@
             markers.push(marker);
 
             marker.addListener("click", () => {
+
+                map.setZoom(16);
+                map.panTo(marker.getPosition()); // Pan map to that position
+
                 infowindow.open({
                     anchor: marker,
                     map,
                     shouldFocus: false,
                 });
+
+                
 
             });
 
