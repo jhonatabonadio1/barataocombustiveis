@@ -280,29 +280,106 @@
     ]
 
     let map;
-
     const markers = [];
+    
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
 
-    locations.map(e => {
-        $("#storesList").append(`<div class="item" id="${e.id}">
-                        <div class="store-icon">
-                            <i class="fas fa-gas-pump"></i>
-                        </div>
-                        <div class="store-info">
-                            <h4>${e.title}</h4>
-                            <span>${e.address}</span>
-                            <p><i class="fas fa-map-marker-alt"></i><b>${e.city}, ${e.state} - ${e.cep}</b></p>
-                        </div>
-                    </div>`)
-    })
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+    
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+    
+            if (sParameterName[0] === sParam) {
+                return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+        return false;
+    };
 
-    const arrayL = locations.length
+    const stateParam = getUrlParameter('state');
 
-    if (arrayL <= 1) {
-        $("#storesCount").html(`<b>${arrayL} resultado</b> em Brasil`)
-    } else {
-        $("#storesCount").html(`<b>${arrayL} resultados</b> em Brasil`)
+    function showStateResultCounter(states, stateText){
+        const arrayL = states.length
+        if (arrayL <= 1) {
+            $("#storesCount").html(`<b>${arrayL} resultado</b> em ${stateText}`)
+        } else {
+            $("#storesCount").html(`<b>${arrayL} resultados</b> em ${stateText}`)
+        }
     }
+
+    function brasilResults(locations){
+        const arrayL = locations.length
+        
+        if (arrayL <= 1) {
+            $("#storesCount").html(`<b>${arrayL} resultado</b> em Brasil`)
+        } else {
+            $("#storesCount").html(`<b>${arrayL} resultados</b> em Brasil`)
+        }
+    }
+
+    function mapStates(states){
+        states.map(e => {
+            $("#storesList").append(`<div class="item" id="${e.id}">
+                    <div class="store-icon">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <div class="store-info">
+                        <h4>${e.title}</h4>
+                        <span>${e.address}</span>
+                        <p><i class="fas fa-map-marker-alt"></i><b>${e.city}, ${e.state} - ${e.cep}</b></p>
+                    </div>
+                </div>`)
+        })
+    }
+
+    function mapAllStates(locations){
+        locations.map(e => {
+            $("#storesList").append(`<div class="item" id="${e.id}">
+                            <div class="store-icon">
+                                <i class="fas fa-gas-pump"></i>
+                            </div>
+                            <div class="store-info">
+                                <h4>${e.title}</h4>
+                                <span>${e.address}</span>
+                                <p><i class="fas fa-map-marker-alt"></i><b>${e.city}, ${e.state} - ${e.cep}</b></p>
+                            </div>
+                        </div>`)
+        })
+    }
+
+    if(stateParam){
+
+            if(stateParam == "BR"){
+
+                mapAllStates(locations)
+                brasilResults(locations);
+               
+            }else{
+                const states = locations.filter(e => e.state === stateParam)
+                const stateText = $("#region").find(`option[value=${stateParam}`).text();
+    
+                $("#region").find("option:selected").removeAttr("selected")
+                $("#region").find(`option[value=${stateParam}`).attr("selected", "selected")
+                $("#storesList").find(".item").remove()
+    
+                mapStates(states)
+    
+                showStateResultCounter(states, stateText)
+            }
+
+     
+    }else{
+
+        mapAllStates(locations)
+        brasilResults(locations);
+    
+    }
+
 
     function initMap() {
         // The location of Uluru
@@ -378,47 +455,14 @@
             const stateText = $(this).find("option:selected").text();
             const states = locations.filter(e => e.state === state)
             $("#storesList").find(".item").remove()
-            states.map(e => {
-                $("#storesList").append(`<div class="item" id="${e.id}">
-                        <div class="store-icon">
-                            <i class="fas fa-gas-pump"></i>
-                        </div>
-                        <div class="store-info">
-                            <h4>${e.title}</h4>
-                            <span>${e.address}</span>
-                            <p><i class="fas fa-map-marker-alt"></i><b>${e.city}, ${e.state} - ${e.cep}</b></p>
-                        </div>
-                    </div>`)
-            })
-
-            const country = locations.filter(e => e.country === "BR")
+            
+            mapStates(states)
 
             if (state == "BR") {
-                country.map(e => {
-                    $("#storesList").append(`<div class="item" id="${e.id}">
-                        <div class="store-icon">
-                            <i class="fas fa-gas-pump"></i>
-                        </div>
-                        <div class="store-info">
-                            <h4>${e.title}</h4>
-                            <span>${e.address}</span>
-                            <p><i class="fas fa-map-marker-alt"></i><b>${e.city}, ${e.state} - ${e.cep}</b></p>
-                        </div>
-                    </div>`)
-                })
-                const arrayLF = country.length
-                if (arrayLF <= 1) {
-                    $("#storesCount").html(`<b>${arrayLF} resultado</b> em ${stateText}`)
-                } else {
-                    $("#storesCount").html(`<b>${arrayLF} resultados</b> em ${stateText}`)
-                }
+                mapAllStates(locations)
+                brasilResults(locations);
             } else {
-                const arrayL = states.length
-                if (arrayL <= 1) {
-                    $("#storesCount").html(`<b>${arrayL} resultado</b> em ${stateText}`)
-                } else {
-                    $("#storesCount").html(`<b>${arrayL} resultados</b> em ${stateText}`)
-                }
+                showStateResultCounter(states, stateText)
             }
 
             goToMarker()

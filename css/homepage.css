@@ -300,7 +300,7 @@ section.hero .debtForm form {
     width: 100%;
 }
 
-section.hero .debtForm form input[type=text] {
+section.hero .debtForm form select {
     background: #f3f3f3;
     border: 1px solid #c0c0c0;
     box-sizing: border-box;
