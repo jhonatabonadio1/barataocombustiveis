@@ -513,7 +513,7 @@ header .container .flex .right .logo img{
 }
 
 .filter-desktop .filter div:last-child{
-    flex:60%;
+    flex:80%;
 }
 
 .filter-mobile .filter{
@@ -847,58 +847,6 @@ header .container .flex .right .logo img{
 /************************/
 
 
-@media(min-width:980px) {
-    #asideMask{
-        display: none !important;
-    }
-    #account main .sectionTitle div {
-        gap:20px;
-    }
-    #toggleNav{
-        display: none;
-    }
-    #account main .sectionTitle {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    #account aside {
-        display: flex;
-        width: 350px !important;
-        background:#f3f3f8 !important;
-    }
-
-    .btn {
-        width: auto;
-        height: 40px;
-        line-height: 40px;
-    }
-
-    #account main {
-        margin-left: 350px;
-        border-radius: 40px 0 0 40px;
-        position: fixed;
-        padding: 60px 0;
-        z-index: 1;
-        height: 100vh !important;
-        width: calc(100% - 350px);
-        overflow: auto;
-        margin-top: 0;
-    }
-
-    #account .navMobile {
-        display: none;
-    }
-
-    #account main .sectionTitle h1 {
-        font-size:38px;
-    }
-    #account aside .aside-header .user-info {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-}
 
 /************************/
 /**** MAIN > WALLET > ADD CARD *****/
@@ -1067,6 +1015,60 @@ header .container .flex .right .logo img{
     object-fit: cover;
 }
 
+
+@media(min-width:980px) {
+    #asideMask{
+        display: none !important;
+    }
+    #account main .sectionTitle div {
+        gap:20px;
+    }
+    #toggleNav{
+        display: none;
+    }
+    #account main .sectionTitle {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #account aside {
+        display: flex;
+        width: 350px !important;
+        background:#f3f3f8 !important;
+    }
+
+    .btn {
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    #account main {
+        margin-left: 350px;
+        border-radius: 40px 0 0 40px;
+        position: fixed;
+        padding: 60px 0;
+        z-index: 1;
+        height: 100vh !important;
+        width: calc(100% - 350px);
+        overflow: auto;
+        margin-top: 0;
+    }
+
+    #account .navMobile {
+        display: none;
+    }
+
+    #account main .sectionTitle h1 {
+        font-size:38px;
+    }
+    #account aside .aside-header .user-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
 @media(min-width: 700px) {
     .wallet .grid {
         width: 100%;
@@ -1221,6 +1223,9 @@ header .container .flex .right .logo img{
     .wallet .grid{
         width: 80%;
     }  
+    .filter-desktop .filter div:last-child{
+        flex:60%;
+    }
 }
 @media(min-width: 1600px){
     .addCard .grid .card-wrapper{
