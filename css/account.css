@@ -79,6 +79,30 @@ body {
     background: rgba(0, 0, 0, 0.4);
 }
 
+#account aside::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+}
+
+#account aside::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+    margin: 10px;
+}
+
+#account aside::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#account aside::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#account aside::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.4);
+}
+
 #toggleNav{
     border:none;
     font-size:32px;
@@ -104,12 +128,6 @@ body {
 /****************/
 /****ASIDE*****/
 /****************/
-
-
-
-#account aside::-webkit-scrollbar {
-    display: none;
-}
 
 
 #account aside {
@@ -1209,7 +1227,6 @@ header .container .flex .right .logo img{
         transform: scale(1.2);
     }
 }
-
 
 @media(max-width: 480px){
     #settings .grid .image{
