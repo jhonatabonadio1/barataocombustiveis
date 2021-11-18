@@ -6,7 +6,7 @@
 
 # Telas do QRCode
 
-- Novas telas de erro/sucesso
+- Novas telas de erro/sucessoa
 
 # Novos arquivos
 
@@ -20,4 +20,7 @@
 
 - css/qrcode.css
 - qrcode.html (Retirei o botão de escanear, pois era desnecessário)
-- scripts.js
+- passo-1.html
+- passo-2.html
+- js/scripts.js
+- css/steps.css
