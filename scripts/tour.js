@@ -10,12 +10,12 @@ var options = {
   steps: [
     {
       title: "Bem-vindo(a)!",
-      intro: "Este é um guia rápido para te ensinarmos a usar nossa plataforma de um jeito simples e rápido!"
+      intro: "Este é um guia rápido para te ajudar a usar nossa plataforma de um jeito simples e fácil!"
     },
     {
       element: document.querySelector('.fuelCard'),
       title: "Combustível",
-      intro: 'Cada item desse é um combustível, todos os combustíveis disponíveis estarão agrupados um abaixo do outro.'
+      intro: 'Todos os combustíveis disponíveis estarão agrupados em uma lista em forma de cartões.'
     },
     {
       element: document.querySelector('.promo'),
@@ -25,22 +25,22 @@ var options = {
     {
       element: document.querySelector('.form'),
       title: "Cupons",
-      intro: 'Aqui você pode adicionar a quantidade de cupons que você deseja comprar.'
+      intro: 'Neste campo, você pode adicionar a quantidade de cupons que você deseja comprar.'
     },
     {
       element: document.querySelector('.liters'),
       title: "Litros",
-      intro: 'Aqui você pode selecionar a quantidade de litros que deseja comprar.'
+      intro: 'Já neste campo, você pode selecionar a quantidade de litros que deseja comprar.'
     },
     {
       element: document.querySelector('.totalValueLiters'),
       title: "Valor total",
-      intro: 'Selecionou a qualidade de litros e cupons? Agora é só conferir o valor total da sua seleção!'
+      intro: 'Selecionou a qualidade de litros e cupons? Agora é só conferir o valor total da sua seleção e ir para o pagamento!'
     },
     {
       element: document.querySelector('.totalPrice'),
       title: "Pagamento",
-      intro: 'Após selecionar os combustíveis que você deseja comprar abaixo, basta clicar em "Pagar Agora" e ir para a próxima etapa.'
+      intro: 'Basta clicar em "Pagar Agora" e ir para a etapa de pagamento. Facil, não é?'
     },
   ]
 }
