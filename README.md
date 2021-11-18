@@ -1,4 +1,5 @@
 
+
 # Etapas
 
 - Botão de mostrar o carrinho de compras no passo-2
