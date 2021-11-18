@@ -1,8 +1,4 @@
 
-# Etapas
-
-- Botão de mostrar o carrinho de compras no passo-2
-
 # Telas do QRCode
 
 - Novas telas de erro/sucesso
