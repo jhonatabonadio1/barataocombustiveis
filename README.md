@@ -1,5 +1,26 @@
 
 
+# Troca da foto de perfil
+
+- Foi adicionado um avatar.svg
+
+- Foi trocado a foto de perfil padrão de png para svg
+
+Arquivos alterados:
+
+orders.html
+passo-1.html
+passo-2.html
+passo-3.html
+payments.html
+settings.html
+wallet.html
+addcard.html
+
+Novos arquivos:
+
+avatar.svg
+
 # Landing 
 
 - No homepage.css, foi trocado o bg1.jpg pelo care.jpg
