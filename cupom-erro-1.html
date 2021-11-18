@@ -21,11 +21,8 @@
         </header>
         <main>
             <div class="voucherAlert">
-                <h2>Aproxime do leitor</h2>
-                <p>Vá até um posto credênciado e aproxime o QR Code do leitor.</p>
-            </div>
-            <div class="qrCode">
-                <img src="./assets/qr-code.svg" alt="">
+                <h2>Este cupom já foi utilizado</h2>
+                <p>Este cupom foi utilizado no dia 18 de novembro de 2021 às 11:24</p>
             </div>
         </main>
         <div class="logo">
@@ -38,6 +35,18 @@
     <script src="https://kit.fontawesome.com/4c9c458037.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script>
+        function scan() {
+            Swal.fire({
+                icon: "info",
+                title: "Aproxime o código do leitor",
+                text: "Vá até um posto credênciado e aproxime o QR Code do leitor.",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+            })
+        }
+    </script>
 
 </body>
 
