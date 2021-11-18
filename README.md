@@ -1,5 +1,28 @@
 
 
+# Landing 
+
+- No homepage.css, foi trocado o bg1.jpg pelo care.jpg
+- A alteração está como /** alterado **/
+
+# Intro
+
+- No passo-1.html foi importando 2 scripts : intro.js e js/tour.js
+- Foi adicionado algumas classes nos combustíveis
+- Foi adicionado o ícone de uma lupa ao lado do badge da nota fiscal
+- As alterações estão marcadas como /** alterado **/ ou <!-- alterado -->
+- Os novos códigos estão como: /** Novo bloco **/
+
+Novos arquivos:
+
+- tour.js
+
+Arquvios alterados:
+
+steps.css
+passo-1.html
+
+
 # Etapas
 
 - Botão de mostrar o carrinho de compras no passo-2
