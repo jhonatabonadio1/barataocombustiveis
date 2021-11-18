@@ -160,7 +160,6 @@ $(window).resize(function () {
     $("#asideMask").removeClass("active")
   }
 })
-/** */
 
 $("#showCart").click(function () {
 
