@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./css/global.css" />
   <link rel="stylesheet" href="./css/steps.css" />
 
+  <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
+
   <link rel="shortcut icon" href="./assets/logo_mobile.png" type="image/x-icon">
 
 </head>
@@ -186,7 +188,7 @@
             </p>
           </div>
           <div class="flex">
-            <div class="card fuelCard" id="1">
+            <div class="card fuelCard">
               <div class="flex">
                 <div class="col">
                   <div class="flex">
@@ -214,7 +216,9 @@
                       <small>DE <b>R$6,84</b> POR:</small>
                       <h4 class="sale">R$6,14 à vista</h4>
                       <a href="./notafiscal.pdf" target="_blank">
-                        <div class="badge promo">Nota fiscal</div>
+                        <!-- ALTERADO-->
+                        <div class="badge promo">Nota fiscal <i class="fas fa-search"></i></div>
+                        <!-- ALTERADO-->
                       </a>
                     </div>
                   </div>
@@ -224,8 +228,10 @@
                 <input type="hidden" value="6.025" id="fuelPrice" />
                 <div class="flex">
                   <div class="inputGrid">
-                    <div>
+                    <div class="liters">
+                      <!-- ALTERADO-->
                       <label for="placa">Litros</label>
+                      <!-- ALTERADO-->
                       <select class="form-control" id="lts">
                         <option value="0">Selecione</option>
                         <option value="5">5 Lts</option>
@@ -235,7 +241,9 @@
                       </select>
                       <div class="inputError"></div>
                     </div>
-                    <div>
+                    <!-- ALTERADO-->
+                    <div class="totalValueLiters">
+                      <!-- ALTERADO-->
                       <label for="placa">Valor total</label>
                       <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
                       <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
@@ -274,7 +282,9 @@
                       <small>DE <b>R$5,75</b> POR:</small>
                       <h4>R$4,89 à vista</h4>
                       <a href="./notafiscal.pdf" target="_blank">
-                        <div class="badge promo">Nota fiscal</div>
+                        <!-- ALTERADO-->
+                        <div class="badge promo">Nota fiscal <i class="fas fa-search"></i></div>
+                        <!-- ALTERADO-->
                       </a>
                     </div>
                   </div>
@@ -284,7 +294,9 @@
                 <input type="hidden" value="5.29" id="fuelPrice" />
                 <div class="flex">
                   <div class="inputGrid">
-                    <div>
+                    <!-- ALTERADO-->
+                    <div class="liters">
+                      <!-- ALTERADO-->
                       <label for="placa">Litros</label>
                       <select class="form-control" id="lts">
                         <option value="0">Selecione</option>
@@ -295,7 +307,9 @@
                       </select>
                       <div class="inputError"></div>
                     </div>
-                    <div>
+                    <!-- ALTERADO-->
+                    <div class="totalValueLiters">
+                      <!-- ALTERADO-->
                       <label for="placa">Valor total</label>
                       <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
                       <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
@@ -323,7 +337,7 @@
                   <div class="flex">
                     <div class="addQuantity">
                       <label>Quantos cupons?</label>
-                      <div class="form">
+                      <div class="form quantityForm">
                         <button class="form-control minusButton fas fa-minus" data-field="quantity"></button>
                         <input type="number" value="0" id="qntField" name="quantity" class="form-control quantityField"
                           disabled>
@@ -334,7 +348,9 @@
                       <small>DE <b>R$7,02</b> POR:</small>
                       <h4>R$6,59 à vista</h4>
                       <a href="./notafiscal.pdf" target="_blank">
-                        <div class="badge promo">Nota fiscal</div>
+                        <!-- ALTERADO-->
+                        <div class="badge promo">Nota fiscal <i class="fas fa-search"></i></div>
+                        <!-- ALTERADO-->
                       </a>
                     </div>
                   </div>
@@ -344,7 +360,9 @@
                 <input type="hidden" value="6.59" id="fuelPrice" />
                 <div class="flex">
                   <div class="inputGrid">
-                    <div>
+                    <!-- ALTERADO-->
+                    <div class="liters">
+                      <!-- ALTERADO-->
                       <label for="placa">Litros</label>
                       <select class="form-control" id="lts">
                         <option value="0">Selecione</option>
@@ -355,7 +373,9 @@
                       </select>
                       <div class="inputError"></div>
                     </div>
-                    <div>
+                    <!-- ALTERADO-->
+                    <div class="totalValueLiters">
+                      <!-- ALTERADO-->
                       <label for="placa">Valor total</label>
                       <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
                       <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
@@ -395,7 +415,9 @@
                       <small>DE <b>R$5,74</b> POR:</small>
                       <h4>R$5,29 à vista</h4>
                       <a href="./notafiscal.pdf" target="_blank">
-                        <div class="badge promo">Nota fiscal</div>
+                        <!-- ALTERADO-->
+                        <div class="badge promo">Nota fiscal <i class="fas fa-search"></i></div>
+                        <!-- ALTERADO-->
                       </a>
                     </div>
                   </div>
@@ -405,7 +427,9 @@
                 <input type="hidden" value="5.29" id="fuelPrice" />
                 <div class="flex">
                   <div class="inputGrid">
-                    <div>
+                    <!-- ALTERADO-->
+                    <div class="liters">
+                      <!-- ALTERADO-->
                       <label for="placa">Litros</label>
                       <select class="form-control" id="lts">
                         <option value="0">Selecione</option>
@@ -416,7 +440,9 @@
                       </select>
                       <div class="inputError"></div>
                     </div>
-                    <div>
+                    <!-- ALTERADO-->
+                    <div class="totalValueLiters">
+                      <!-- ALTERADO-->
                       <label for="placa">Valor total</label>
                       <input type="hidden" id="ltsValueReal" name="fuelTotalPrice" value="0" disabled />
                       <input type="text" class="form-control" id="ltsValue" value="R$ 0,00" disabled />
@@ -438,7 +464,11 @@
   </script>
   <script src="https://kit.fontawesome.com/4c9c458037.js" crossorigin="anonymous"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/intro.js@4.3.0/intro.js"></script>
   <script src="./scripts/mathFuel.js"></script>
+  <!--NOVO BLOCO-->
+  <script src="./scripts/tour.js"></script>
+  <!--NOVO BLOCO-->
   <script src="./scripts/scripts.js"></script>
 
 </body>

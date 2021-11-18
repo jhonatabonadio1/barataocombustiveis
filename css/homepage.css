@@ -1,69 +1,3 @@
-/** REMOVIDO **/
-/**
-section.hero {
-    background: #f3f3f3;
-    height: 100%;
-    position: relative;
-    margin: 0;
-    width: 100%;
-    background: #f3f3f3;
-    z-index: 1;
-    padding-bottom: 40px;
-}
-
-section.hero:before {
-    content: "";
-    display: block;
-    top: 0px;
-    right: 0px;
-    max-height: 100%;
-    width: 100%;
-    height: 480px;
-    background: url("../assets/initial_img.png") no-repeat center top;
-    background-size: auto 480px;
-    margin-top:-8em;
-}
-
-section.hero .grid{
-    margin-top: 2em;
-}
-
-section.hero h1 {
-    font-size: 3.4rem;
-    line-height: 3.4rem;
-}
-
-section.hero h2{
-    font-size:1.4rem;
-}
-
-section.hero h3 {
-    margin-bottom: 1rem;
-}
-
-section.hero form {
-    background: #fff;
-    padding: 8px;
-    border-radius: 40px;
-    display: flex;
-    gap: 5px;
-    box-shadow: 0 0 15px rgb(145 145 145 / 10%);
-}
-
-section.hero form input {
-    flex: 1;
-    border: none;
-}
-
-section.hero form button i {
-    font-size: 16px;
-}
-**/
-/** REMOVIDO **/
-
-
-/** NOVO BLOCO **/
-
 .regionModal{
     position:fixed;
     top:0;
@@ -179,11 +113,7 @@ section.hero form button i {
 .regionModal .modal .empty h2{
     color:rgba(0, 0, 0, 36%);
 }
-/** NOVO BLOCO **/
 
-
-
-/** NOVO BLOCO **/
 section.hero {
     padding: 0;
 }
@@ -378,28 +308,25 @@ section.hero .debtForm h3 {
     height: 60px;
 }
 
-/** NOVO BLOCO **/
-
-
 section.fuelEconomy {
     position: relative;
     z-index: 1;
     margin-top: 10rem;
 }
-
+/** ALTERADO **/
 section.fuelEconomy:before {
     content: "";
     width: 60%;
     height: 100%;
     top: 0px;
-    background: url(../assets/bg1.jpg) center no-repeat;
+    background: url(../assets/care.jpg) center no-repeat;
     background-size: cover;
     position: absolute;
     z-index: -1;
     left: 0;
     border-radius: 0 12px 12px 0;
 }
-
+/** ALTERADO **/
 section.fuelEconomy .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -680,79 +607,8 @@ section.fuelEconomy .sectionCard button {
     font-size: 16px;
 }
 
-/** REMOVIDO **/
-/**
-@media(min-width:480px) {
-    section.hero h1 {
-        font-size: 3.8rem;
-        line-height: 3.8rem;
-    }
-}
-
-@media(min-width:600px) {
-    section.hero:before {
-        height: 600px;
-        background: url("../assets/initial_img.png") no-repeat center top;
-        background-size: auto 600px;
-        margin-top:-8em;
-    }
-}
-
-@media(min-width: 780px) {
-    section.hero:before {
-        height: 740px;
-        background: url("../assets/initial_img.png") no-repeat center top;
-        background-size: auto 740px;
-        margin-top:-8em;
-    }
-}
-**/
-/** REMOVIDO **/
-
-
 @media (min-width: 980px) {
 
-    /**REMOVIDO**/
-    /**
-             display: flex;
-        align-items: center;
-        height: 100%;
-        min-height: 100vh;
-        padding: 140px 0;
-    }
-
-    section.hero:before{
-        margin:0;
-    }
-
-    section.hero form{
-        width: 500px;
-    }
-    section.hero h2{
-        font-size:1.6rem;
-    }
-    section.hero .container .grid {
-        width: 45%;
-        margin-top: 60px;
-        padding-right: 40px;
-    }
-
-    section.hero:before {
-        width: 53%;
-        height: 95%;
-        position: absolute;
-        background-size: auto 100%;
-        background-position: left top;
-    }
-
-    section.hero h1 {
-        font-size: 4.6rem;
-        line-height: 5rem;
-    }
-    **/
-    /**REMOVIDO**/
-
-    /** NOVO BLOCO **/
     .regionModal .modal{
         width: 60%;
         padding:30px;
@@ -823,8 +679,6 @@ section.fuelEconomy .sectionCard button {
         padding:10px 0;
     }
 
-    /** NOVO BLOCO **/
-
     section.fuelEconomy .grid {
         grid-template-columns: 2fr 2fr;
     }
@@ -893,20 +747,7 @@ section.fuelEconomy .sectionCard button {
 }
 
 @media(max-width:300px) {
-    /** REMOVIDO **/
-        /**
-    section.hero h1{
-        font-size:2.6rem !important;
-        line-height: 2.6rem !important;
-    }
-    section.hero form input{
-        width:80%;
-    }
-    section.hero form button{
-        flex:0
-    }
-        **/
-    /** REMOVIDO **/
+
     .fuelEconomy .grid {
         margin: 0 -8px;
     }

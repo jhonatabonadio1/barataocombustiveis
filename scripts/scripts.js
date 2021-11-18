@@ -160,7 +160,8 @@ $(window).resize(function () {
     $("#asideMask").removeClass("active")
   }
 })
-/* */
+
+/* NOVO BLOCO*/
 $("#showCart").click(function () {
 
   $("#cart").toggleClass("active")

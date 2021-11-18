@@ -936,6 +936,11 @@ header .container .flex .right .logo img {
     color: #fff;
     font-weight: bold;
 }
+/** NOVO BLOCO **/
+.badge i{
+    font-size:12px;
+}
+/** NOVO BLOCO **/
 
 /******************************/
 /********* END BADGE *********/
