@@ -85,7 +85,59 @@
                         </div>
                         <h1>Fazer pagamento</h1>
                     </div>
+                    <div>
+                        <button id="showCart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cartBadge">2</span>
+                        </button>
+                    </div>
                 </div>
+
+                <div id="cart">
+                    <div id="cartMask"></div>
+                    <div class="cartBody">
+                        <header>
+                            <h4>Meu carrinho</h4>
+                            <button id="closeCart"><i class="fas fa-times"></i></button>
+                        </header>
+                        <div class="main-divider"></div>
+
+                        <div class="cartContent">
+                            <h4>Resumo da compra</h4>
+                            <div class="item">
+                                <div class="itemInfo">
+                                    <div>
+                                        <span class="badge-circle">2</span>
+                                    </div>
+                                    <div>
+                                        <h4>Gasolina comum</h4>
+                                        <span>Gasolina comum</span>
+                                    </div>
+                                </div>
+                                <div class="itemPrice">
+                                    <span class="badge-rounded">15 Lts</span>
+                                    <h4 class="price">R$125,00</h4>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="itemInfo">
+                                    <div>
+                                        <span class="badge-circle">2</span>
+                                    </div>
+                                    <div>
+                                        <h4>Gasolina comum</h4>
+                                        <span>Gasolina comum</span>
+                                    </div>
+                                </div>
+                                <div class="itemPrice">
+                                    <span class="badge-rounded">15 Lts</span>
+                                    <h4 class="price">R$125,00</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="main-divider"></div>
 
                 <div class="totalPrice">
@@ -121,8 +173,19 @@
                                             <i class="fas fa-percentage" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <select>
-                                        <option value="">1x de R$214,00</option>
+                                    <select name="parcelas" id="parcerlas">
+                                        <option value="">1x de R$157,90</option>
+                                        <option value="">2x de R$157,90</option>
+                                        <option value="">3x de R$157,90</option>
+                                        <option value="">4x de R$157,90</option>
+                                        <option value="">5x de R$157,90</option>
+                                        <option value="">6x de R$157,90</option>
+                                        <option value="">7x de R$157,90</option>
+                                        <option value="">8x de R$157,90</option>
+                                        <option value="">9x de R$157,90</option>
+                                        <option value="">10x de R$157,90</option>
+                                        <option value="">11x de R$157,90</option>
+                                        <option value="">11x de R$157,90</option>
                                     </select>
                                 </div>
 
@@ -182,8 +245,6 @@
                             <div class="card-wrapper"></div>
                         </div>
                     </div>
-                </section>
-
                 </section>
             </div>
         </main>

@@ -2,6 +2,7 @@
 # Etapas
 
 - Botão de mostrar o carrinho de compras no passo-2
+- Formulários de login (Não esquecer de fazer o upload do scripts.js com scripts novos)
 
 # Telas do QRCode
 
@@ -19,3 +20,4 @@
 
 - css/qrcode.css
 - qrcode.html (Retirei o botão de escanear, pois era desnecessário)
+- scripts.js

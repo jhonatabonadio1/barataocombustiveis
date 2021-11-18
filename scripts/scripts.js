@@ -1,6 +1,10 @@
 document.addEventListener('touchmove', function (event) {
-  if (event.scale !== 1) { event.preventDefault(); }
-}, { passive: false });
+  if (event.scale !== 1) {
+    event.preventDefault();
+  }
+}, {
+  passive: false
+});
 
 function tabLink(evt, cityName) {
   var i, tabcontent, tablinks;
@@ -118,36 +122,100 @@ $("#regionModal #closeModal").click(function() {
 $("#toggleFilters").click(function () {
   $("#filters").slideToggle()
   if ($("#toggleFilters").find("i").hasClass("fa-chevron-down")) {
-      $("#toggleFilters").find("i").removeClass("fa-chevron-down")
-      $("#toggleFilters").find("i").addClass("fa-chevron-up")
+    $("#toggleFilters").find("i").removeClass("fa-chevron-down")
+    $("#toggleFilters").find("i").addClass("fa-chevron-up")
   } else {
-      $("#toggleFilters").find("i").removeClass("fa-chevron-up")
-      $("#toggleFilters").find("i").addClass("fa-chevron-down")
+    $("#toggleFilters").find("i").removeClass("fa-chevron-up")
+    $("#toggleFilters").find("i").addClass("fa-chevron-down")
   }
 
-  
+
 
 })
 
 $("#toggleNav").click(function () {
 
   $("#asideNav").toggleClass("active")
-  $("#asideNav.active").animate({ left: '-325px' }, 0);
-  $("#asideNav.active").animate({ left: '0px' }, 350);
+  $("#asideNav.active").animate({
+    left: '-325px'
+  }, 0);
+  $("#asideNav.active").animate({
+    left: '0px'
+  }, 350);
   $("#asideMask").toggleClass("active")
   $("body").css("overflowY", "hidden")
 })
 $("#asideMask").click(function () {
-  $("#asideNav.active").animate({ left: '-325px' }, 350, function () {
-      $("#asideNav").removeClass("active")
-      $("#asideNav").css("left", "")
-      $("#asideMask").removeClass("active")
+  $("#asideNav.active").animate({
+    left: '-325px'
+  }, 350, function () {
+    $("#asideNav").removeClass("active")
+    $("#asideNav").css("left", "")
+    $("#asideMask").removeClass("active")
   })
 })
 $(window).resize(function () {
   if ($(window).width() > 980) {
-      $("#asideNav").removeClass("active")
-      $("#asideMask").removeClass("active")
+    $("#asideNav").removeClass("active")
+    $("#asideMask").removeClass("active")
   }
+})
+
+
+$("#showCart").click(function () {
+
+  $("#cart").toggleClass("active")
+  $("#cart").find(".cartBody").animate({
+    right: '-325px'
+  }, 0);
+  $("#cart").find(".cartBody").animate({
+    right: '0px'
+  }, 350);
+  $("body").css("overflowY", "hidden")
+})
+
+
+$("#cart").find("#cartMask").click(function () {
+  $("#cart").find(".cartBody").animate({
+    right: '-325px'
+  }, 350, function () {
+    $("#cart").removeClass("active")
+    $("#cart").find(".cartBody").css("right", "")
+  })
+})
+
+$("#cart").find("#closeCart").click(function () {
+  $("#cart").find(".cartBody").animate({
+    right: '-350px'
+  }, 350, function () {
+    $("#cart").removeClass("active")
+    $("#cart").find(".cartBody").css("right", "")
+  })
+})
+
+function openModal() {
+  $("#openLoginModal").addClass("active")
+}
+
+$("#signupButton").click(function () {
+  $("#login").addClass("disabled")
+  $("#signup").removeClass("disabled")
+})
+
+$("#loginButton").click(function () {
+  $("#signup").addClass("disabled")
+  $("#login").removeClass("disabled")
+})
+
+$("#modalMask").click(function () {
+  $("#openLoginModal").removeClass("active")
+  $("#signup").addClass("disabled")
+  $("#login").removeClass("disabled")
+})
+
+$("#closeDialog").click(function () {
+  $("#openLoginModal").removeClass("active")
+  $("#signup").addClass("disabled")
+  $("#login").removeClass("disabled")
 })
 /** NOVO BLOCO **/

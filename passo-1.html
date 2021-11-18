@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
-  <title>Etapa 1: Comprar combustível | Baratão Combustíveis</title>
+  <title>Etapa 1: Carrinho | Baratão Combustíveis</title>
   <link rel="stylesheet" href="./css/internalHeader.css" />
   <link rel="stylesheet" href="./css/global.css" />
   <link rel="stylesheet" href="./css/steps.css" />
@@ -19,6 +19,7 @@
   <button id="toggleNav">
     <i class="fas fa-bars"></i>
   </button>
+
 
   <div id="store">
     <div id="asideMask"></div>
@@ -100,8 +101,75 @@
             </div>
           </div>
           <div>
-            <button type="submit" class="btn blue" onClick="window.location.href = './passo-2.html'">Pagar
+            <button type="submit" class="btn blue" onClick="openModal()">Pagar
               agora</button>
+          </div>
+        </div>
+
+
+        <div class="dialog" id="openLoginModal">
+          <div id="modalMask"></div>
+          <div id="login" class="auth">
+            <button id="closeDialog"><i class="fas fa-times"></i></button>
+            <header>
+              <h1>Faça o login</h1>
+              <span>Faça o login para continuar.</span>
+            </header>
+            <form action="/passo-2.html">
+              <div>
+
+                <input type="email" name="" placeholder="E-mail" id="">
+              </div>
+              <div>
+                <input type="password" name="" placeholder="Senha" id="">
+              </div>
+              <div>
+                <button type="submit">Fazer login</button>
+              </div>
+            </form>
+            <div class="loginFooter">
+              <p>Não possui uma conta?<a href="#" id="signupButton"> Cadastre-se</a></p>
+              <a href="./password.html" target="_blank"> Esqueceu a senha?</a>
+            </div>
+          </div>
+
+          <div id="signup" class="auth disabled">
+            <button id="closeDialog"><i class="fas fa-times"></i></button>
+            <header>
+              <h1>Faça o cadastro</h1>
+              <span>Crie uma conta gratuitamente.</span>
+            </header>
+            <form action="/passo-2.html">
+              <div class="inputGrid">
+                <div>
+                  <input type="text" name="" placeholder="Nome" id="">
+                </div>
+                <div>
+
+                  <input type="text" name="" placeholder="Sobrenome" id="">
+                </div>
+              </div>
+              <div>
+
+                <input type="text" name="" placeholder="Telefone" id="">
+              </div>
+              <div>
+                <input type="text" name="" placeholder="CPF" id="">
+              </div>
+              <div>
+
+                <input type="email" name="" placeholder="E-mail" id="">
+              </div>
+              <div>
+                <input type="password" name="" placeholder="Senha" id="">
+              </div>
+              <div>
+                <button type="submit">Criar conta</button>
+              </div>
+            </form>
+            <div class="loginFooter">
+              <p>Já possui uma conta?<a href="#" id="loginButton"> Faça o login</a></p>
+            </div>
           </div>
         </div>
 
@@ -355,7 +423,6 @@
               </div>
             </div>
           </div>
-
         </section>
       </div>
     </main>

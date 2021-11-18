@@ -2,6 +2,156 @@
 /********* MODAL LOGIN **********/
 /******************************/
 
+.dialog {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.dialog.active {
+    display: flex;
+}
+
+#modalMask {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 50%);
+}
+
+.auth {
+    background: #fff;
+    width: 90%;
+    z-index: 1;
+    padding: 30px 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.auth #closeDialog {
+    position: absolute;
+    top: 20px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    right: 20px;
+}
+
+.auth h1 {
+    color: #333;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.auth header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+    margin-top: 20px;
+    width: 90%;
+    border-bottom: 1px solid rgba(0, 0, 0, 10%);
+    padding-bottom: 20px;
+
+}
+
+
+.auth form input {
+    padding: 15px 20px;
+    border: 1px solid rgba(0, 0, 0, 10%);
+    background: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.auth form input:focus,
+.auth form input:active {
+    outline-color: #6969DF;
+}
+
+.auth .inputGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:15px;
+    max-width: 100%;
+}
+.auth .inputGrid input{
+    width: 100%;
+}
+
+.auth form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth.disabled{
+    display: none;
+}
+
+.auth form button {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: #222;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 10%);
+    background: #6969DF;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.auth .loginFooter {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth .loginFooter p {
+    margin-bottom: 20px;
+}
+
+.auth .loginFooter a {
+    color: var(--text)
+}
+
+@media(min-width:980px) {
+    .auth {
+        width: 50%;
+    }
+
+}
+
+@media(min-width:1300px) {
+    .auth {
+        width: 30%;
+    }
+
+    .auth form {
+
+        width: 70%;
+
+    }
+}
 
 /******************************/
 /********* GLOBAL **********/
@@ -172,7 +322,7 @@ body {
 }
 
 #store aside.active .aside-body .aside-item h3 {
-    font-size:18px;
+    font-size: 18px;
 }
 
 #store aside.active .aside-body .aside-item .icon {
@@ -458,10 +608,10 @@ header .container .flex .right .logo img {
 
 #store main .sectionTitle {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 30px;
 }
 
@@ -570,7 +720,7 @@ header .container .flex .right .logo img {
 .totalPrice {
     display: flex;
     flex-direction: row;
-    padding:10px 0;
+    padding: 10px 0;
     justify-content: space-between;
     align-items: center;
 }
@@ -728,7 +878,7 @@ header .container .flex .right .logo img {
 .fuelCard .cardAccordion .inputGrid select {
     width: 100%;
     margin-top: -8px;
-    background:#fff;
+    background: #fff;
     display: block;
     border-color: #dcdcdc;
 }
@@ -755,6 +905,14 @@ header .container .flex .right .logo img {
 
 #ltsValue {
     font-weight: bold;
+}
+
+.products {
+    padding-bottom: 20px !important;
+}
+
+.priceFooter {
+    padding-bottom: 40px !important;
 }
 
 
@@ -789,67 +947,74 @@ header .container .flex .right .logo img {
 /*****************************/
 
 
-#payment .grid{
+#payment .grid {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
 }
 
 #payment .grid form input,
-#payment .grid form select{
+#payment .grid form select {
     width: 100%;
-    padding:0px 20px;
-    font-size:14px;
-    border:1px solid rgba(0, 0, 0, 10%);
-    border-left:0;
-    background:#fff;
+    padding: 0px 20px;
+    font-size: 14px;
+    border: 1px solid rgba(0, 0, 0, 10%);
+    border-left: 0;
+    background: #fff;
     border-radius: 0 8px 8px 0;
-    height:60px;
+    height: 60px;
 }
-#payment .grid form button{
-    height:60px;
+
+#payment .grid form button {
+    height: 60px;
     width: 100%;
     margin-top: 1rem;
-    float:right;
+    float: right;
 }
+
 #payment .grid form input:focus,
 #payment .grid form input:active,
 #payment .grid form select:focus,
-#payment .grid form select:active{
-    outline:0;
+#payment .grid form select:active {
+    outline: 0;
 }
-#payment .grid form label{
+
+#payment .grid form label {
     color: rgb(0 0 0 / 40%);
     font-size: 14px;
 }
 
-#payment .grid form .inputGroup{
+#payment .grid form .inputGroup {
     width: 100%;
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    margin-top:5px;
+    margin-top: 5px;
 }
-#payment .grid form .inputGrid{
+
+#payment .grid form .inputGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap:20px;
+    gap: 20px;
 }
-#payment .grid form .inputGroup .input-group-prepend{
-    border:1px solid rgba(0, 0, 0, 10%);
-    border-right:0;
-    height:60px;
-    padding:20px;
+
+#payment .grid form .inputGroup .input-group-prepend {
+    border: 1px solid rgba(0, 0, 0, 10%);
+    border-right: 0;
+    height: 60px;
+    padding: 20px;
     border-radius: 8px 0 0 8px;
 }
-#payment .grid .card{
+
+#payment .grid .card {
     display: none;
     justify-content: center;
     width: 100%;
-    border:none;
-    box-shadow:none;
+    border: none;
+    box-shadow: none;
 }
-#payment .grid .card-wrapper{
+
+#payment .grid .card-wrapper {
     transform: scale(1);
 }
 
@@ -917,7 +1082,7 @@ header .container .flex .right .logo img {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap:40px;
+    gap: 40px;
     margin-top: 20px;
     align-items: center;
 }
@@ -927,8 +1092,8 @@ header .container .flex .right .logo img {
 
 }
 
-#store .alert p a{
-    color:#222;
+#store .alert p a {
+    color: #222;
     font-weight: bold;
 }
 
@@ -982,6 +1147,170 @@ header .container .flex .right .logo img {
 /********************************/
 
 
+/***************************************/
+/**** PAGAMENTO > MOSTRAR CARRINHO *****/
+/***************************************/
+
+#showCart {
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background: #6969DF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity .12s ease;
+    position: relative;
+}
+
+#showCart .cartBadge {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    color: #fff;
+    background: #37375C;
+    font-size: 12px;
+    padding: 5px;
+    font-weight: bold;
+    line-height: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+
+#showCart i {
+    line-height: 50px;
+}
+
+#showCart:hover {
+    opacity: .7;
+}
+
+#cart {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#cart.active {
+    display: flex;
+}
+
+#cartMask {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 50%);
+}
+
+#cart .cartBody {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background: #fff;
+    padding: 20px;
+}
+
+#cart .cartBody header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#cart .cartBody header h4 {
+    font-size: 22px;
+}
+
+#cart .cartBody header button {
+    background: #fff;
+    border: none;
+    font-size: 28px;
+    color: #6969DF;
+}
+
+#cart .cartBody .cartContent {
+    display: flex;
+    flex-direction: column;
+}
+
+#cart .cartBody .cartContent .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 10%);
+    padding: 20px 0;
+}
+
+#cart .cartBody .cartContent .item:last-child {
+    border-bottom: 0;
+}
+
+#cart .cartBody .cartContent .item .itemInfo {
+    gap: 10px;
+}
+
+#cart .cartBody .cartContent .item .itemInfo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#cart .cartBody .cartContent .item .itemInfo span {
+    font-size: 14px;
+}
+
+#cart .cartBody .cartContent .item .itemInfo .badge-circle {
+    color: #fff;
+    background: #6969DF;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+#cart .cartBody .cartContent .item div {
+    display: flex;
+    flex-direction: row;
+}
+
+#cart .cartBody .cartContent .item .itemPrice {
+    display: block;
+    gap: 2px;
+}
+
+#cart .cartBody .cartContent .item .itemPrice .badge-rounded {
+    color: #fff;
+    background: #6969DF;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 2px 5px;
+}
+
+#cart .cartBody .cartContent .item .itemPrice h4 {
+    margin-top: 3px;
+}
+
+/***************************************/
+/**** PAGAMENTO > MOSTRAR CARRINHO *****/
+/***************************************/
+
 
 @media(min-width:980px) {
     #asideMask {
@@ -989,7 +1318,7 @@ header .container .flex .right .logo img {
     }
 
     .totalPrice {
-        padding:0;
+        padding: 0;
     }
 
     .regionModal .modal {
@@ -1068,16 +1397,18 @@ header .container .flex .right .logo img {
         margin-bottom: 0px;
         font-size: 20px;
     }
-    #payment .grid{
+
+    #payment .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
 
-    #payment .grid .card{
+    #payment .grid .card {
         display: flex;
     }
-    #payment .grid form button{
+
+    #payment .grid form button {
         width: calc(50% - 10px);
     }
 }
@@ -1109,7 +1440,7 @@ header .container .flex .right .logo img {
         padding: 20px !important;
         align-items: center;
     }
-    
+
 
     #orders .order-item .order-quantity {
         width: 100%;
@@ -1137,8 +1468,8 @@ header .container .flex .right .logo img {
 
 }
 
-@media(min-width: 1600px){
-    #payment .grid .card-wrapper{
+@media(min-width: 1600px) {
+    #payment .grid .card-wrapper {
         transform: scale(1.2);
     }
 }
