@@ -1,10 +1,6 @@
-document.addEventListener('touchmove', function (event) {
-  if (event.scale !== 1) {
-    event.preventDefault();
-  }
-}, {
-  passive: false
-});
+/****************/
+/**** TABS ******/
+/****************/
 
 function tabLink(evt, cityName) {
   var i, tabcontent, tablinks;
@@ -20,28 +16,14 @@ function tabLink(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+/****************/
+/**** TABS ******/
+/****************/
 
-$(".toggle").click(function () {
-  $("nav ul").toggleClass("active");
-  $(".toggleTimes").removeClass("hidden")
-});
 
-$(".toggleTimes").click(function () {
-  $("nav ul").removeClass("active")
-  $(".toggleTimes").addClass("hidden")
-})
-
-$('#openCheckoutModal').click(function () {
-  $('.checkoutModal').addClass('active');
-  $('.modalMask').addClass('active');
-  $('body').addClass('overflow-hidden');
-})
-
-$('#closeCheckoutModal').click(function () {
-  $('.checkoutModal').removeClass('active');
-  $('.modalMask').removeClass('active');
-  $('body').removeClass('overflow-hidden');
-})
+/***************/
+/**** FAQ ******/
+/***************/
 
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -58,6 +40,14 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+/***************/
+/**** FAQ ******/
+/***************/
+
+/***************************/
+/**** NAVBAR DROPDOWN ******/
+/***************************/
+
 $(document).click(function (e) {
   var target = e.target;
   $('.dropdown-menu').each(function () {
@@ -69,55 +59,13 @@ $(document).click(function (e) {
   });
 });
 
+/*******************************/
+/**** END NAVBAR DROPDOWN ******/
+/*******************************/
 
-$('#checkoutButton').click(function () {
-  $('#checkout').slideToggle()
-  $('.modalMask').addClass("active")
-  $('html, body').addClass("noScroll")
-})
-
-$('#hiddenCheckout').click(function () {
-  $("#checkout").slideToggle()
-  $('.modalMask').removeClass("active")
-  $('html, body').removeClass("noScroll")
-})
-
-/* REMOVIDO */
-/** 
-function emptyStation(){
-  Swal.fire({
-    title: 'Atenção',
-    text: "No momento, não existem postos credênciados em região, deseja continuar?",
-    icon: 'warning',
-    showCancelButton: true,
-    focusConfirm: false,
-    confirmButtonColor: '#00894b',
-    confirmButtonText: 'Sim, quero continuar!',
-    cancelButtonText: "Cancelar"
-  }).then((result) => {
-    if (result.isConfirmed) {
-      window.location.href = "./passo-1.html"
-    }
-  })
-}
-
-
-$("[data-target=regionModal]").click(function() {
-  if($(this).parents("form").find("#regionInput").val()){
-    $("#regionModal").fadeIn() 
-  }
-})
-
-$("#regionModal #closeModal").click(function() {
-  $("#regionModal").fadeOut()
-})
-
-
-**/
-/* REMOVIDO */
-
-
-/** NOVO BLOCO **/
+/***************************/
+/**** OPEN FILTER MENU *****/
+/***************************/
 
 $("#toggleFilters").click(function () {
   $("#filters").slideToggle()
@@ -129,9 +77,15 @@ $("#toggleFilters").click(function () {
     $("#toggleFilters").find("i").addClass("fa-chevron-down")
   }
 
-
-
 })
+
+/******************************/
+/**** END OPEN FILTER MENU ****/
+/******************************/
+
+/*****************************/
+/***** OPEN ASIDE BUTTON ****/
+/****************************/
 
 $("#toggleNav").click(function () {
 
@@ -161,7 +115,14 @@ $(window).resize(function () {
   }
 })
 
-/* NOVO BLOCO*/
+/*********************************/
+/***** END OPEN ASIDE BUTTON *****/
+/*********************************/
+
+/******************************/
+/****** OPEN CART BUTTON ******/
+/******************************/
+
 $("#showCart").click(function () {
 
   $("#cart").toggleClass("active")
@@ -173,7 +134,6 @@ $("#showCart").click(function () {
   }, 350);
   $("body").css("overflowY", "hidden")
 })
-
 
 $("#cart").find("#cartMask").click(function () {
   $("#cart").find(".cartBody").animate({
@@ -193,29 +153,48 @@ $("#cart").find("#closeCart").click(function () {
   })
 })
 
+
+/******************************/
+/**** END OPEN CART BUTTON ****/
+/******************************/
+
+/*************************/
+/****** LOGIN MODAL ******/
+/*************************/
+
 function openModal() {
+  /* ADICIONA CLASSE ACTIVE NO MODAL */
   $("#openLoginModal").addClass("active")
+
+  /* AO CLICAR NO BOTÃO DE SIGNUP */
+  $("#signupButton").click(function () {
+    $("#login").addClass("disabled")
+    $("#signup").removeClass("disabled")
+  })
+
+  /* AO CLICAR NO BOTÃO DE LOGIN */
+  $("#loginButton").click(function () {
+    $("#signup").addClass("disabled")
+    $("#login").removeClass("disabled")
+  })
+
+  /* AO CLICAR EM QUALQUER ÁREA FORA DO MODAL */
+  $("#modalMask").click(function () {
+    $("#openLoginModal").removeClass("active")
+    $("#signup").addClass("disabled")
+    $("#login").removeClass("disabled")
+  })
+
+  /* AO CLICAR NO BOTÃO DE FECHAR */
+
+  $("button[id='closeDialog']").click(function () {
+    $("#openLoginModal").removeClass("active")
+    $("#signup").addClass("disabled")
+    $("#login").removeClass("disabled")
+  })
+
 }
 
-$("#signupButton").click(function () {
-  $("#login").addClass("disabled")
-  $("#signup").removeClass("disabled")
-})
-
-$("#loginButton").click(function () {
-  $("#signup").addClass("disabled")
-  $("#login").removeClass("disabled")
-})
-
-$("#modalMask").click(function () {
-  $("#openLoginModal").removeClass("active")
-  $("#signup").addClass("disabled")
-  $("#login").removeClass("disabled")
-})
-
-$("#closeDialog").click(function () {
-  $("#openLoginModal").removeClass("active")
-  $("#signup").addClass("disabled")
-  $("#login").removeClass("disabled")
-})
-/** NOVO BLOCO **/
+/*****************************/
+/****** END LOGIN MODAL ******/
+/*****************************/
